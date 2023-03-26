@@ -21,5 +21,7 @@ return require('packer').startup(function(use)
     },
   }
 
+  -- Tmux navigator 使用<C-h/j/k/l>在分屏间切换
+  use 'christoomey/vim-tmux-navigator'
 end)
 

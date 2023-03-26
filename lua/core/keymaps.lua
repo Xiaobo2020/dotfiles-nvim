@@ -25,4 +25,5 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- <Tab> 展开文件内容，注意光标还是在tree中
 -- <Return> 展开文件夹或打开文件，注意关闭tree并光标移动到文件中
 
-
+-- vim-tmux-navigator --
+-- <C-h/j/k/l> 在上下左右分屏间切换光标,包括Nvim-tree
