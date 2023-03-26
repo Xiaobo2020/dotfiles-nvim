@@ -4,8 +4,16 @@ if (not status) then return end
 git.setup({
   keymaps = {
     -- Open blame window
-    blame = "<Leader>gb",
+    blame = "<leader>gb",
+    -- Close blame window
+    quit_blame = "q",
+    -- Open blame commit
+    blame_commit = "<CR>",
     -- Open file/folder in git repository
-    browse = "<Leader>go",
+    browse = "<leader>go",
+    -- Opens a new diff that compares against the current index
+    diff = "<leader>df",
+    -- Close git diff
+    diff_close = "q",
   }
 })
