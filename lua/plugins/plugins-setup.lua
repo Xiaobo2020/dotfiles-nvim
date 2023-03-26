@@ -26,5 +26,13 @@ return require('packer').startup(function(use)
 
   -- 语法高亮
   use 'nvim-treesitter/nvim-treesitter'
+
+  -- 使用Mason插件统一管理LSP服务
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
 end)
 
