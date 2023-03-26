@@ -36,3 +36,5 @@ keymap.set("n", "<leader>te", "<Cmd>tabedit<CR>")
 keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
 
+-- Git keymaps in plugins/git.lua
+
