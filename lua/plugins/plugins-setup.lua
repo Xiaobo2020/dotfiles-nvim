@@ -57,6 +57,8 @@ return require('packer').startup(function(use)
   -- Tab分隔 --
   use 'akinsho/bufferline.nvim'
 
+  -- 颜色显示 --
+  use 'norcalli/nvim-colorizer.lua'
 
 end)
 
