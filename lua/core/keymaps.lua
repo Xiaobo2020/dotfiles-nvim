@@ -31,4 +31,8 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- comment
 -- gcc单行注释,gc多行注释
 
+-- bufferline配置的Tab
+keymap.set("n", "<leader>te", "<Cmd>tabedit<CR>")
+keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
+keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
 

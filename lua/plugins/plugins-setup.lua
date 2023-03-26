@@ -46,11 +46,17 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
 
+  -- 注释 --
   use {
     'numToStr/Comment.nvim',
     requires = {
       'JoosepAlviste/nvim-ts-context-commentstring'
     }
   }
+
+  -- Tab分隔 --
+  use 'akinsho/bufferline.nvim'
+
+
 end)
 
