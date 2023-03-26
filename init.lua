@@ -18,4 +18,5 @@ require("plugins.bufferline")
 require("plugins.colorizer")
 require("plugins.gitsigns")
 require("plugins.git")
+require("plugins.telescope")
 

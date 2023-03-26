@@ -38,3 +38,31 @@ keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
 
 -- Git keymaps in plugins/git.lua
 
+-- Telescope
+local builtin = require("telescope.builtin")
+local function telescope_buffer_dir()
+  return vim.fn.expand('%:p:h')
+end
+keymap.set("n", "<leader>ff", function()
+  builtin.find_files({
+    no_ignore = false,
+    hidden = true,
+  })
+end, {})
+keymap.set("n", "<leader>fg", builtin.live_grep, {})
+keymap.set("n", "<leader>fb", builtin.buffers, {})
+keymap.set("n", "<leader>fh", builtin.help_tags, {})
+keymap.set("n", "<leader>fd", function()
+  require("telescope").extensions.file_browser.file_browser({
+    path = "%:p:h",
+    cwd = telescope_buffer_dir(),
+    respect_gitignore = false,
+    hidden = true,
+    grouped = true,
+    previewer = false,
+    initial_mode = "normal",
+    layout_config = { height = 40 }
+  })
+end)
+
+
