@@ -27,3 +27,8 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 
 -- vim-tmux-navigator --
 -- <C-h/j/k/l> 在上下左右分屏间切换光标,包括Nvim-tree
+
+-- comment
+-- gcc单行注释,gc多行注释
+
+

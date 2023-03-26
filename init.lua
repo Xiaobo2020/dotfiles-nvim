@@ -12,4 +12,4 @@ require("plugins.lsp")
 require("plugins.cmp")
 require("plugins.autopairs")
 require("plugins.ts-autotag")
-
+require("plugins.comment")
