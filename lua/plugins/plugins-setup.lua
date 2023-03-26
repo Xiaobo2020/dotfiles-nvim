@@ -60,5 +60,9 @@ return require('packer').startup(function(use)
   -- 颜色显示 --
   use 'norcalli/nvim-colorizer.lua'
 
+  -- Git --
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim' -- For git blame & browse
+
 end)
 

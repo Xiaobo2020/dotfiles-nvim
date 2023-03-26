@@ -15,4 +15,6 @@ require("plugins.ts-autotag")
 require("plugins.comment")
 require("plugins.bufferline")
 require("plugins.colorizer")
+require("plugins.gitsigns")
+require("plugins.git")
 
