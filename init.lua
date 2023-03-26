@@ -1,1 +1,2 @@
-print('hello world')
+require('core.options')
+
