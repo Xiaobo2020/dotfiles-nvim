@@ -42,5 +42,9 @@ return require('packer').startup(function(use)
   use "saadparwaiz1/cmp_luasnip"
   use "rafamadriz/friendly-snippets"
 
+  -- 括号等自动补全 --
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+
 end)
 
