@@ -26,10 +26,18 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- <Return> 展开文件夹或打开文件，注意关闭tree并光标移动到文件中
 
 -- vim-tmux-navigator --
--- <C-h/j/k/l> 在上下左右分屏间切换光标,包括Nvim-tree
+-- <C-h> - 左移 
+-- <C-j> - 下移
+-- <C-k> - 上移 
+-- <C-l> - 右移
 
 -- comment
--- gcc单行注释,gc多行注释
+-- <leader>gb - open blame window
+-- q - close blame window
+-- <CR> - open blame commit
+-- <leader>go - open file/folder in git repositor
+-- <leader>df - opens a new diff that compares against the current initial_mode
+-- q - close git diff
 
 -- bufferline配置的Tab
 keymap.set("n", "<leader>te", "<Cmd>tabedit<CR>")
