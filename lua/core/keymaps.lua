@@ -19,3 +19,10 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直分屏
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+-- 插件 --
+-- nvim-tree
+keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+-- <Tab> 展开文件内容，注意光标还是在tree中
+-- <Return> 展开文件夹或打开文件，注意关闭tree并光标移动到文件中
+
+

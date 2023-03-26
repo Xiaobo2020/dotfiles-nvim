@@ -5,3 +5,5 @@ require("plugins.lualine")
 require("core.options")
 require("core.keymaps")
 
+require("plugins.nvim-tree")
+
