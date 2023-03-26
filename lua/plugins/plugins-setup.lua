@@ -21,18 +21,26 @@ return require('packer').startup(function(use)
     },
   }
 
-  -- Tmux navigator 使用<C-h/j/k/l>在分屏间切换
+  -- Tmux navigator --
   use 'christoomey/vim-tmux-navigator'
 
-  -- 语法高亮
+  -- 语法高亮 --
   use 'nvim-treesitter/nvim-treesitter'
 
-  -- 使用Mason插件统一管理LSP服务
+  -- 使用Mason插件统一管理LSP服务 --
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+
+  -- 自动补全 --
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-path"
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
+  use "rafamadriz/friendly-snippets"
 
 end)
 
