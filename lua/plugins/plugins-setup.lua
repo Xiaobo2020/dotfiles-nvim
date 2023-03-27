@@ -34,6 +34,10 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- formatting & linting
+  use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+  use("jayp0521/mason-null-ls.nvim")     -- bridges gap b/w mason & null-ls
+
   -- 自动补全 --
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"

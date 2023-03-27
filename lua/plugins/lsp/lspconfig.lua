@@ -1,15 +1,31 @@
 local status, mason = pcall(require, "mason")
 if (not status) then return end
 
-local status2, masonlspconfig = pcall(require, "mason-lspconfig")
+local status2, mason_lspconfig = pcall(require, "mason-lspconfig")
 if (not status2) then return end
 
+local status3, mason_null_ls = pcall(require, "mason-null-ls")
+if (not status3) then return end
+
 mason.setup()
-masonlspconfig.setup({
+mason_lspconfig.setup({
   automatic_installation = true,
   ensure_installed = {
     "lua_ls",
+    "tsserver",
+    "html",
+    "cssls",
+    "tailwindcss",
   },
+})
+
+mason_null_ls.setup({
+  automatic_installation = true,
+  ensure_installed = {
+    "prettier", -- ts/js formatter
+    "eslint_d", -- ts/js linter
+    "stylua",   -- lua formatter
+  }
 })
 
 local protocol = require('vim.lsp.protocol')
@@ -72,7 +88,7 @@ local preset_configs = {
   end
 }
 
-masonlspconfig.setup_handlers({
+mason_lspconfig.setup_handlers({
   function(server_name)
     require('lspconfig')[server_name].setup(preset_configs)
   end,

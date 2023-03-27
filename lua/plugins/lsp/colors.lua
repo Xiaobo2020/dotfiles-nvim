@@ -7,4 +7,3 @@ colors.setup({
   Information = "#0db9d7",
   Hint = "#10B981"
 })
-
