@@ -29,7 +29,7 @@ nvimtree.setup({
     }
   },
   diagnostics = {
-    enable = true,
+    enable = false,
     show_on_dirs = false,
     debounce_delay = 50,
     icons = {
@@ -38,5 +38,10 @@ nvimtree.setup({
       warning = 'W',
       error = 'E'
     }
+  },
+  renderer = {
+    icons = {
+      git_placement = "signcolumn"
+    },
   },
 })

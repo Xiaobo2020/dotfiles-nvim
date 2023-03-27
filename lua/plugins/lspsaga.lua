@@ -20,4 +20,15 @@ lspsaga.setup({
   },
 })
 
-local diagnostic = require("lspsaga.diagnostic")
+local diagnosticx = require("lspsaga.diagnostic")
+
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●'
+  },
+  signs = false,
+  update_in_insert = true,
+  float = {
+    source = "always", -- Or "if_many"
+  },
+})
