@@ -83,3 +83,7 @@ keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
 -- <CR> - confirm rename
 keymap.set("n", "gd", "<Cmd>Lspsaga goto_definition<CR>", opts)
 keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)
+
+-- Markdown previewe
+keymap.set("n", "<leader>mp", "<Cmd>MarkdownPreview<CR>")     -- Start markdown preview
+keymap.set("n", "<leader>ms", "<Cmd>MarkdownPreviewStop<CR>") -- Stop markdown preview
