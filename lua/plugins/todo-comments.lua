@@ -3,7 +3,7 @@ if (not status) then return end
 
 local default_opts = {
   signs = false,     -- show icons in the signs column
-  sign_priority = 8, -- sign priority
+  sign_priority = 5, -- sign priority
   -- keywords recognized as todo comments
   keywords = {
     FIX = {
