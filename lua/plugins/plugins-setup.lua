@@ -80,4 +80,10 @@ return require('packer').startup(function(use)
   use "ggandor/leap.nvim"
   use "tpope/vim-surround"
   use 'mg979/vim-visual-multi'
+
+  -- Todo comment --
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
 end)

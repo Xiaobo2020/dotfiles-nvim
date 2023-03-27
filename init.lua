@@ -20,6 +20,7 @@ require("plugins.git")
 require("plugins.telescope")
 require("plugins.lspsaga")
 require("plugins.leap")
+require("plugins.todo-comments")
 
 -- 按键映射 --
 require("core.keymaps")
