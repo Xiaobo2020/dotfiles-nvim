@@ -15,6 +15,7 @@ mason_lspconfig.setup({
     "tsserver",
     "html",
     "cssls",
+    "emmet_ls",
     "tailwindcss",
   },
 })
