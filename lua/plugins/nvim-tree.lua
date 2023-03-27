@@ -33,11 +33,10 @@ nvimtree.setup({
     show_on_dirs = false,
     debounce_delay = 50,
     icons = {
-      hint = '',
-      info = '',
-      warning = '',
-      error = ''
+      hint = 'H',
+      info = 'I',
+      warning = 'W',
+      error = 'E'
     }
   },
 })
-
