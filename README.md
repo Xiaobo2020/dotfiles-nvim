@@ -24,7 +24,7 @@ nvm use v16.19.0
 
 # Set default configs for nvm
 set --universal nvm_default_version v16.19.0
-set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript_language_server @tailwindcss/language-server eslint prettier
+set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript_language_server @tailwindcss/language-server eslint prettier vscode-langservers-extracted
 
 # Restart your terminal
 ```
