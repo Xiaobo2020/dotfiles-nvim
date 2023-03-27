@@ -1,10 +1,14 @@
 # Neovim
 
-## Theme
+## Preview
+
+## Setup 
+
+### Theme
 
 + [ ] everforest
 
-## Plugins
+### Plugins
 
 + [ ] Packer
 
