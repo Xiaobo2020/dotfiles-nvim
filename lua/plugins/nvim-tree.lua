@@ -6,7 +6,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-nvimtree.setup({
+require("nvim-tree").setup({
   sort_by = "case_sensitive",
   actions = {
     open_file = { quit_on_open = true }
@@ -16,7 +16,7 @@ nvimtree.setup({
     update_cwd = true
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
     custom = { '^.git$', '^node_modules$' }
   },
   git = {
