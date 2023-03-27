@@ -76,7 +76,8 @@ return require('packer').startup(function(use)
   -- LSP UIs --
   use 'glepnir/lspsaga.nvim'
 
-  -- Leap And Surround --
+  -- Leap And Surround And Multi --
   use "ggandor/leap.nvim"
   use "tpope/vim-surround"
+  use 'mg979/vim-visual-multi'
 end)
