@@ -40,3 +40,6 @@ opt.termguicolors = true
 opt.signcolumn = "yes"
 vim.cmd("colorscheme everforest")
 
+-- 编辑 --
+opt.swapfile = false
+opt.backup = false

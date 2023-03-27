@@ -39,13 +39,11 @@ keymap.set("n", "<leader>te", "<Cmd>tabedit<CR>")
 keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
 
--- Git keymaps in plugins/git.lua
--- <leader>gb - open blame window
--- q - close blame window
--- <CR> - open blame commit
--- <leader>go - open file/folder in git repository
--- <leader>df - opens a new diff compares against the current index
--- q - close git diff
+-- Git
+keymap.set("n", "<leader>do", "<Cmd>DiffviewOpen<CR>")          -- open
+keymap.set("n", "<leader>dc", "<Cmd>DiffviewClose<CR>")         -- close
+keymap.set("n", "<leader>dh", "<Cmd>DiffviewFileHistory %<CR>") -- current file
+keymap.set("n", "<leader>db", "<Cmd>DiffviewFileHistory<CR>")   -- current branch
 
 -- Telescope
 local builtin = require("telescope.builtin")

@@ -63,7 +63,9 @@ return require('packer').startup(function(use)
   -- Git --
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
-
+  use { 'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
   -- Telescope --
   use {
     'nvim-telescope/telescope.nvim',
