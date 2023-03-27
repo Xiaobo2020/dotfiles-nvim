@@ -19,6 +19,9 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直分屏
 -- 取消高亮
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
+-- 全选
+keymap.set('n', '<c-a>', 'gg<S-v>G')
+
 -- 插件 --
 -- nvim-tree
 keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
@@ -26,9 +29,9 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- <Return> 展开文件夹或打开文件，注意关闭tree并光标移动到文件中
 
 -- vim-tmux-navigator --
--- <C-h> - 左移 
+-- <C-h> - 左移
 -- <C-j> - 下移
--- <C-k> - 上移 
+-- <C-k> - 上移
 -- <C-l> - 右移
 
 -- comment
@@ -73,4 +76,14 @@ keymap.set("n", "<leader>fd", function()
   })
 end)
 
-
+-- Lspsaga --
+local opts = { noremap = true, silent = true }
+keymap.set("n", "[d", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+keymap.set("n", "]d", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+keymap.set("n", "<leader>k", "<Cmd>Lspsaga hover_doc<CR>", opts)
+keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
+-- <C-c> - quit rename
+-- <CR> - exec rename
+-- <CR> - confirm rename
+keymap.set("n", "gd", "<Cmd>Lspsaga goto_definition<CR>", opts)
+keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)

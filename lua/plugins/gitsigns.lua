@@ -10,4 +10,3 @@ gitsigns.setup({
     changedelete = { text = "~" },
   }
 })
-

@@ -1,7 +1,6 @@
 require("plugins.plugins-setup")
 
 require("core.options")
-require("core.keymaps")
 
 -- 插件 --
 require("plugins.everforest")
@@ -19,4 +18,7 @@ require("plugins.colorizer")
 require("plugins.gitsigns")
 require("plugins.git")
 require("plugins.telescope")
+require("plugins.lspsaga")
 
+-- 按键映射 --
+require("core.keymaps")
