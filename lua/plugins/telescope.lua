@@ -29,7 +29,7 @@ telescope.setup({
         },
         ["n"] = {
           -- your custom normal mode mappings
-          ["a"] = fb_actions.create, -- same with create in Nvimtree 
+          ["a"] = fb_actions.create, -- same with create in Nvimtree
           ["h"] = fb_actions.goto_parent_dir,
           ["/"] = function()
             vim.cmd('startinsert')
@@ -41,4 +41,3 @@ telescope.setup({
 })
 
 telescope.load_extension("file_browser")
-

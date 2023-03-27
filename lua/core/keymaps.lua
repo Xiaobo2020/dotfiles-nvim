@@ -34,20 +34,18 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- <C-k> - 上移
 -- <C-l> - 右移
 
--- comment
--- <leader>gb - open blame window
--- q - close blame window
--- <CR> - open blame commit
--- <leader>go - open file/folder in git repositor
--- <leader>df - opens a new diff that compares against the current initial_mode
--- q - close git diff
-
 -- bufferline配置的Tab
 keymap.set("n", "<leader>te", "<Cmd>tabedit<CR>")
 keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
 
 -- Git keymaps in plugins/git.lua
+-- <leader>gb - open blame window
+-- q - close blame window
+-- <CR> - open blame commit
+-- <leader>go - open file/folder in git repository
+-- <leader>df - opens a new diff compares against the current index
+-- q - close git diff
 
 -- Telescope
 local builtin = require("telescope.builtin")

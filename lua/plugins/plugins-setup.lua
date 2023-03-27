@@ -76,6 +76,7 @@ return require('packer').startup(function(use)
   -- LSP UIs --
   use 'glepnir/lspsaga.nvim'
 
-  -- Leap --
+  -- Leap And Surround --
   use "ggandor/leap.nvim"
+  use "tpope/vim-surround"
 end)
