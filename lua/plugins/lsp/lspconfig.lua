@@ -90,8 +90,8 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "gi", "<Cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
 	keymap.set("n", "<leader>ca", "<Cmd>Lspsaga code_action<CR>", opts) -- see available code actions
 
-	keymap.set("n", "<leader>D", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
-	keymap.set("n", "<leader>d", "<Cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
+	keymap.set("n", "<leader>d", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
+	-- keymap.set("n", "<leader>d", "<Cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
 	-- keymap.set("n", "<leader>o", "<Cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 	-- keymap.set("n", "<leader>tt", "<Cmd>Lspsaga term_toggle<CR>", opts) -- see outline on right hand side
 
