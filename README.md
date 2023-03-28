@@ -1,32 +1,43 @@
 ## Fish shell
 
+Install [ fish ](https://github.com/fish-shell/fish-shell) shell
+
 ```bash
-# Install fish shell from https://github.com/fish-shell/fish-shell
 brew install fish
+```
 
-# Check your path of fish and then config fish shell
-which fish # -> /opt/homebrew/bin/fish
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells 
+Check your path of fish:
+```bash
+which fish
+# e.g. -> /opt/homebrew/bin/fish
+```
+
+Set fish as your default shell in terminal with your path of fish:
+```bash
 chsh -s /opt/homebrew/bin/fish
+```
 
-# Set vim alias to nvim in fish shell
-echo "alias vim nvim" > ~/.config/fish/aliases.fish
-# Import aliases.fish on the top of `~/.config/fish/config.fish`
-# ". ~/.config/fish/aliases.fish"
+If fish is not configed in your shell bin, just add it in:
+```bash
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells 
+```
 
-# Restart your terminal
+Then, restart your terminal.
 
-# Install fisher from https://github.com/jorgebucaran/fisher
+If your fish shell is ready, then install [fisher](https://github.com/jorgebucaran/fisher), the packages manager in fish:
+```bash
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+```
 
-# Install nvm by fisher
+Once fisher is ready, then install `nvm` to manage your node version:
+```bash
 fisher install jorgebucaran/nvm.fish
+```
 
-# Config nvm
-nvm install v16.19.0
-nvm use v16.19.0
-
-# Set default configs for nvm
+Of course, we can set default node version  and default packages.
+Here I use `v16.19.0` as my default node version.
+And these packages below are **ALL** needed in my nvim config.
+```bash
 set --universal nvm_default_version v16.19.0
 set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint prettier vscode-langservers-extracted
 ```
@@ -40,20 +51,31 @@ set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript
 
 ## Neovim
 
+Install `neovim` by brew
 ```bash
-# Install Neovim and luajit
-brew install neovim luajit
+brew install neovim
+```
 
-# Download this project
+Alias `vim` to `nvim` by setting in fish
+```bash
+echo "alias vim nvim" > ~/.config/fish/aliases.fish
+```
+
+Then write `. ~/.config/fish/aliases.fish` to the top of `~/.config/fish/config.fish` and restart your termianal again. Now your can use `vim` directly.
+
+Download this project:
+```bash
 git clone https://github.com/Xiaobo2020/dotfiles-nvim.git ~/.config/nvim
+```
 
-# Install Packer.nvim from https://github.com/wbthomason/packer.nvim
+Install [Packer.nvim](https://github.com/wbthomason/packer.nvim)
+```bash
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
-# run :PackerInstall
+Open `~/.config/nvim/init.lua` by `vim` and run `:PackerInstall`
+```bash
 vim ~/.config/nvim/init.lua
-
-# Fix colorsheme error if exists
 ```
 
