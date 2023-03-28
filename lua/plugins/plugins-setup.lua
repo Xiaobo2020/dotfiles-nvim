@@ -107,5 +107,5 @@ return require("packer").startup(function(use)
 	})
 
 	-- Startup --
-	use("mhinz/vim-startify")
+	-- use("mhinz/vim-startify")
 end)

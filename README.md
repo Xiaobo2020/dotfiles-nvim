@@ -83,3 +83,8 @@ Open `~/.config/nvim/init.lua` by `vim` and run `:PackerInstall`
 vim ~/.config/nvim/init.lua
 ```
 
+Fix error caused by highlights.scm of treesitter
+```bash
+cd ~/.local/share/nvim/site/pack/packer/start/nvim-treesitter/queries/vim/
+mv highlights.scm highlights.scm.bak
+```
