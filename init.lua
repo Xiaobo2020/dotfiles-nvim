@@ -21,6 +21,7 @@ require("plugins.telescope")
 require("plugins.lspsaga")
 require("plugins.leap")
 require("plugins.todo-comments")
+require("plugins.diffview")
 
 -- 按键映射 --
 require("core.keymaps")
