@@ -44,7 +44,7 @@ return require("packer").startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("L3MON4D3/LuaSnip")
 	use("saadparwaiz1/cmp_luasnip")
-	use("rafamadriz/friendly-snippets")
+	-- use("rafamadriz/friendly-snippets")
 
 	-- 括号等自动补全 --
 	use("windwp/nvim-autopairs")
