@@ -131,7 +131,6 @@ mason_lspconfig.setup_handlers({
 	eslint = function()
 		require("lspconfig").eslint.setup({
 			on_attach = function(_, bufnr)
-				print("eslint")
 				vim.api.nvim_create_autocmd("BufWritePre", {
 					buffer = bufnr,
 					command = "EslintFixAll",
