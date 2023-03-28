@@ -82,8 +82,9 @@ local on_attach = function(client, bufnr)
 	-- set keybinds
 	keymap.set("n", "[d", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
 	keymap.set("n", "]d", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
-	keymap.set("n", "K", "<Cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
-	keymap.set("n", "gd", "<Cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+	keymap.set("n", "<leader>h", "<Cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+	keymap.set("n", "gf", "<Cmd>Lspsaga lsp_finder<CR>", opts) -- show definition, references
+	keymap.set("n", "gd", "<Cmd>Lspsaga goto_definition<CR>", opts) -- go to definition
 	keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
 	keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts) -- smart rename
 	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration

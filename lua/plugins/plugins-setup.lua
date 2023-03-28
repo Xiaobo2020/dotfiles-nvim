@@ -10,14 +10,16 @@ return require("packer").startup(function(use)
 	-- 状态栏 --
 	use({
 		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		requires = {
+			"nvim-tree/nvim-web-devicons",
+		},
 	})
 
 	-- Nvim Tree --
 	use({
 		"nvim-tree/nvim-tree.lua",
 		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional
+			"nvim-tree/nvim-web-devicons",
 		},
 	})
 
@@ -65,7 +67,13 @@ return require("packer").startup(function(use)
 	-- Git --
 	use("lewis6991/gitsigns.nvim")
 	use("dinhhuy258/git.nvim") -- For git blame & browse
-	use({ "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" })
+	use({
+		"sindrets/diffview.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+	})
 	-- Telescope --
 	use({
 		"nvim-telescope/telescope.nvim",

@@ -28,16 +28,16 @@ keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 -- <Tab> 展开文件内容，注意光标还是在tree中
 -- <Return> 展开文件夹或打开文件，注意关闭tree并光标移动到文件中
 
--- vim-tmux-navigator --
--- <C-h> - 左移
--- <C-j> - 下移
--- <C-k> - 上移
--- <C-l> - 右移
 -- Move window
 keymap.set("n", "<C-h>", "<C-w>h")
 keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-j>", "<C-w>j")
 keymap.set("n", "<C-l>", "<C-w>l")
+-- Resize window
+keymap.set("n", "<C-w><left>", "<C-w><")
+keymap.set("n", "<C-w><right>", "<C-w>>")
+keymap.set("n", "<C-w><up>", "<C-w>+")
+keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- bufferline配置的Tab
 keymap.set("n", "<leader>te", "<Cmd>tabedit<CR>")
