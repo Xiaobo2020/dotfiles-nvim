@@ -1,3 +1,7 @@
+## Screenshot
+
+![Screenshot](./images/Screenshot1.png)
+
 ## Fish shell
 
 Install [ fish ](https://github.com/fish-shell/fish-shell) shell
