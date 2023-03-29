@@ -20,7 +20,7 @@ keymap.set("n", "<leader>sh", "<C-w>s") -- 垂直分屏
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
 -- 全选
-keymap.set("n", "<c-a>", "gg<S-v>G")
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- 插件 --
 -- nvim-tree
