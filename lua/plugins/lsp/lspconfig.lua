@@ -100,8 +100,8 @@ local on_attach = function(client, bufnr)
 	-- typescript specific keymaps (e.g. rename file and update imports)
 	if client.name == "tsserver" then
 		keymap.set("n", "<leader>rf", "<Cmd>TypescriptRenameFile<CR>") -- rename file and update imports
-		keymap.set("n", "<leader>oi", "<Cmd>TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
-		keymap.set("n", "<leader>ru", "<Cmd>TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
+		-- keymap.set("n", "<leader>oi", "<Cmd>TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
+		-- keymap.set("n", "<leader>ru", "<Cmd>TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
 	end
 end
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -115,10 +115,16 @@ mason_lspconfig.setup_handlers({
 		require("lspconfig")[server_name].setup(lsp_configs)
 	end,
 	tsserver = function()
-		require("lspconfig").tsserver.setup(vim.tbl_extend("force", lsp_configs, {
-			filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-			cmd = { "typescript-language-server", "--stdio" },
-		}))
+		require("typescript").setup({
+			server = vim.tbl_extend("force", lsp_configs, {
+				init_options = {
+					preferences = {
+						importModuleSpecifierPreference = "project=relative",
+						jsxAttributeCompletionStyle = "none",
+					},
+				},
+			}),
+		})
 	end,
 	eslint = function()
 		require("lspconfig").eslint.setup({

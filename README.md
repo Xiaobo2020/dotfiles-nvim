@@ -142,6 +142,4 @@ Leader key: `" "`
 | `n` | `<C-c>` |  | Quit when rename variable |
 | `n` | `gf` |  | show definitions & implements & references |
 | `n` | `<leader>rf` |  | Typescript - rename file |
-| `n` | `<leader>oi` |  | Typescript - organize imports |
-| `n` | `<leader>ru` |  | Typescript - remove unused |
 

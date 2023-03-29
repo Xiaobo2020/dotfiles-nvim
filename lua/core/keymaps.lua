@@ -117,12 +117,6 @@ end)
 -- -- Typescript - Rename file and update imports
 -- keymap.set("n", "<leader>rf", "<Cmd>TypescriptRenameFile<CR>")
 
--- -- Typescript - Organize imports
--- keymap.set("n", "<leader>oi", "<Cmd>TypescriptOrganizeImports<CR>")
-
--- -- Typescript - Remove unused variables
--- keymap.set("n", "<leader>ru", "<Cmd>TypescriptRemoveUnused<CR>")
-
 -- Markdown previewe
 keymap.set("n", "<leader>mp", "<Cmd>MarkdownPreview<CR>") -- Start markdown preview
 keymap.set("n", "<leader>ms", "<Cmd>MarkdownPreviewStop<CR>") -- Stop markdown preview
