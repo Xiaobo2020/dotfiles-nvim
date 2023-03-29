@@ -22,7 +22,6 @@ mason_lspconfig.setup({
 		"tsserver",
 		"html",
 		"cssls",
-		"emmet_ls",
 		"tailwindcss",
 	},
 })
@@ -63,17 +62,6 @@ protocol.CompletionItemKind = {
 	"", -- TypeParameter
 }
 
--- local augroup_format = vim.api.nvim_create_augroup("Format", { clear = true })
--- local enable_format_on_save = function(_, bufnr)
--- 	vim.api.nvim_clear_autocmds({ group = augroup_format, buffer = bufnr })
--- 	vim.api.nvim_create_autocmd("BufWritePre", {
--- 		group = augroup_format,
--- 		buffer = bufnr,
--- 		callback = function()
--- 			vim.lsp.buf.format({ bufnr = bufnr })
--- 		end,
--- 	})
--- end
 local keymap = vim.keymap
 local on_attach = function(client, bufnr)
 	-- keybind options
@@ -130,16 +118,6 @@ mason_lspconfig.setup_handlers({
 			filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
 			cmd = { "typescript-language-server", "--stdio" },
 		}))
-		-- require("typescript").setup({
-		-- 	server = vim.tbl_extend("force", lsp_configs, {
-		-- 		init_options = {
-		-- 			preferences = {
-		-- 				importModuleSpecifierPreference = "project=relative",
-		-- 				jsxAttributeCompletionStyle = "none",
-		-- 			},
-		-- 		},
-		-- 	}),
-		-- })
 	end,
 	eslint = function()
 		require("lspconfig").eslint.setup({
@@ -150,11 +128,6 @@ mason_lspconfig.setup_handlers({
 				})
 			end,
 		})
-	end,
-	emmet_ls = function()
-		require("lspconfig").emmet_ls.setup(vim.tbl_extend("force", lsp_configs, {
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-		}))
 	end,
 	lua_ls = function()
 		require("lspconfig").lua_ls.setup(vim.tbl_extend("force", lsp_configs, {
