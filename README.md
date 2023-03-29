@@ -43,7 +43,7 @@ Here I use `v16.19.0` as my default node version.
 And these packages below are **ALL** needed in my nvim config.
 ```bash
 set --universal nvm_default_version v16.19.0
-set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint prettier vscode-langservers-extracted
+set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint_d vscode-langservers-extracted
 ```
 
 ## iTerm2 theme
@@ -55,9 +55,9 @@ set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript
 
 ## Neovim
 
-Install `neovim` by brew
+Install `neovim` by brew and some dependencies used later
 ```bash
-brew install neovim
+brew install neovim ripgrep fd
 ```
 
 Alias `vim` to `nvim` by setting in fish
@@ -78,7 +78,10 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-Open `~/.config/nvim/init.lua` by `vim` and run `:PackerInstall`
+Open `~/.config/nvim/init.lua` by `vim`, then
+1. run `:PackerInstall`
+2. run `:Mason`
+3. Once everything is ready, run `:checkhealth` to verify status
 ```bash
 vim ~/.config/nvim/init.lua
 ```
