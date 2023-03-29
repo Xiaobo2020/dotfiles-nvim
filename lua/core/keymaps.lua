@@ -77,17 +77,51 @@ keymap.set("n", "<leader>fd", function()
 	})
 end)
 
--- -- Lspsaga --
--- local opts = { noremap = true, silent = true }
--- keymap.set("n", "[d", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
--- keymap.set("n", "]d", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
--- keymap.set("n", "<leader>k", "<Cmd>Lspsaga hover_doc<CR>", opts)
--- keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
--- -- <C-c> - quit rename
--- -- <CR> - exec rename
--- -- <CR> - confirm rename
+-- Keymaps in lspconfig.lua
+-- -- Floating terminal
+-- keymap.set("n", "<leader>tt", "<Cmd>Lspsaga term_toggle<CR>", opts)
+
+-- -- Jump to previous diganostic in buffer
+-- keymap.set("n", "<leader>jp", "<Cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+
+-- -- Jump to next diganostic in buffer
+-- keymap.set("n", "<leader>jn", "<Cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+
+-- -- Show diagnostic in current line
+-- keymap.set("n", "<leader>l", "<Cmd>Lspsaga show_line_diagnostics<CR>", opts)
+
+-- -- Show hover doc
+-- keymap.set("n", "<leader>h", "<Cmd>Lspsaga hover_doc<CR>", opts)
+
+-- -- Show code action
+-- keymap.set("n", "<leader>ca", "<Cmd>Lspsaga code_action<CR>", opts)
+
+-- -- Show outline on the right hand side
+-- keymap.set("n", "<leader>ol", "<Cmd>Lspsaga outline<CR>", opts)
+
+-- -- Go to definition
 -- keymap.set("n", "gd", "<Cmd>Lspsaga goto_definition<CR>", opts)
+
+-- -- Go to type definition
+-- keymap.set("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>")
+
+-- -- Peek definition
 -- keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)
+
+-- -- Rename variable
+-- keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
+
+-- -- Show definitions & implements & references
+-- keymap.set("n", "gf", "<Cmd>Lspsaga lsp_finder<CR>", opts)
+
+-- -- Typescript - Rename file and update imports
+-- keymap.set("n", "<leader>rf", "<Cmd>TypescriptRenameFile<CR>")
+
+-- -- Typescript - Organize imports
+-- keymap.set("n", "<leader>oi", "<Cmd>TypescriptOrganizeImports<CR>")
+
+-- -- Typescript - Remove unused variables
+-- keymap.set("n", "<leader>ru", "<Cmd>TypescriptRemoveUnused<CR>")
 
 -- Markdown previewe
 keymap.set("n", "<leader>mp", "<Cmd>MarkdownPreview<CR>") -- Start markdown preview
