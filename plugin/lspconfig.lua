@@ -8,6 +8,11 @@ if not status2 then
 	return
 end
 
+local status3, typescript = pcall(require, "typescript")
+if not status3 then
+	return
+end
+
 local protocol = require("vim.lsp.protocol")
 protocol.CompletionItemKind = {
 	"", -- Text

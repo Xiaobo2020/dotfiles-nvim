@@ -3,11 +3,6 @@ if not status then
 	return
 end
 
--- local status2, typescript = pcall(require, "typescript")
--- if not status2 then
--- 	return
--- end
-
 local formatting = null_ls.builtins.formatting -- to setup formatters
 local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
@@ -26,7 +21,6 @@ null_ls.setup({
 	sources = {
 		formatting.stylua, -- lua formatter
 		diagnostics.fish,
-		-- require("typescript.extensions.null-ls.code-actions"),
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
