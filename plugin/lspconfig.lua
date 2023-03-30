@@ -1,4 +1,4 @@
-local status, mason = pcall(require, "mason")
+local status, lspconfig = pcall(require, "lspconfig")
 if not status then
 	return
 end
@@ -8,31 +8,10 @@ if not status2 then
 	return
 end
 
-local status3, mason_null_ls = pcall(require, "mason-null-ls")
+local status3, typescript = pcall(require, "typescript")
 if not status3 then
 	return
 end
-
-mason.setup()
-
-mason_lspconfig.setup({
-	automatic_installation = true,
-	ensure_installed = {
-		"lua_ls",
-		"tsserver",
-		"eslint",
-		"html",
-		"cssls",
-		"tailwindcss",
-	},
-})
-
-mason_null_ls.setup({
-	automatic_installation = true,
-	ensure_installed = {
-		"stylua", -- lua formatter
-	},
-})
 
 local protocol = require("vim.lsp.protocol")
 protocol.CompletionItemKind = {

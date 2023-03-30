@@ -50,32 +50,37 @@ keymap.set("n", "<leader>dc", "<Cmd>DiffviewClose<CR>") -- close
 keymap.set("n", "<leader>dh", "<Cmd>DiffviewFileHistory %<CR>") -- current file
 keymap.set("n", "<leader>db", "<Cmd>DiffviewFileHistory<CR>") -- current branch
 
--- Telescope
-local builtin = require("telescope.builtin")
-local function telescope_buffer_dir()
-	return vim.fn.expand("%:p:h")
-end
-keymap.set("n", "<leader>ff", function()
-	builtin.find_files({
-		no_ignore = false,
-		hidden = true,
-	})
-end, {})
-keymap.set("n", "<leader>fg", builtin.live_grep, {})
-keymap.set("n", "<leader>fb", builtin.buffers, {})
-keymap.set("n", "<leader>fh", builtin.help_tags, {})
-keymap.set("n", "<leader>fd", function()
-	require("telescope").extensions.file_browser.file_browser({
-		path = "%:p:h",
-		cwd = telescope_buffer_dir(),
-		respect_gitignore = false,
-		hidden = true,
-		grouped = true,
-		previewer = false,
-		initial_mode = "normal",
-		layout_config = { height = 40 },
-	})
-end)
+-- Keymaps in telescope.lua
+-- Find file
+-- keymap.set("n", "<leader>ff", function()
+-- 	builtin.find_files({
+-- 		no_ignore = false,
+-- 		hidden = true,
+-- 	})
+-- end, {})
+
+-- Find from content
+-- keymap.set("n", "<leader>fg", builtin.live_grep, {})
+
+-- Find from buffers
+-- keymap.set("n", "<leader>fb", builtin.buffers, {})
+
+-- Show help tags
+-- keymap.set("n", "<leader>fh", builtin.help_tags, {})
+
+-- -- Find from directory
+-- keymap.set("n", "<leader>fd", function()
+-- 	require("telescope").extensions.file_browser.file_browser({
+-- 		path = "%:p:h",
+-- 		cwd = telescope_buffer_dir(),
+-- 		respect_gitignore = false,
+-- 		hidden = true,
+-- 		grouped = true,
+-- 		previewer = false,
+-- 		initial_mode = "normal",
+-- 		layout_config = { height = 40 },
+-- 	})
+-- end)
 
 -- Keymaps in lspconfig.lua
 -- -- Floating terminal

@@ -1,28 +1,15 @@
-require("plugins.plugins-setup")
+require("xiaobo2020.options")
+require("xiaobo2020.colorscheme")
+require("xiaobo2020.keymaps")
+require("xiaobo2020.plugins")
 
-require("core.options")
-require("core.colorscheme")
+local has = vim.fn.has
+local is_mac = has("macunix")
+local is_win = has("win32")
 
--- 插件 --
-require("plugins.nvim-tree")
-require("plugins.treesitter")
-require("plugins.lsp.lspconfig")
-require("plugins.lsp.null-ls")
-require("plugins.lsp.colors")
-require("plugins.cmp")
-require("plugins.autopairs")
-require("plugins.ts-autotag")
-require("plugins.comment")
-require("plugins.bufferline")
-require("plugins.colorizer")
-require("plugins.gitsigns")
-require("plugins.telescope")
-require("plugins.lspsaga")
-require("plugins.leap")
-require("plugins.diffview")
-require("plugins.todo-comments")
-require("plugins.lualine")
-
-require("core.intro")
--- 按键映射 --
-require("core.keymaps")
+if is_mac then
+	require("xiaobo2020.macos")
+end
+if is_win then
+	require("xiaobo2020.windows")
+end

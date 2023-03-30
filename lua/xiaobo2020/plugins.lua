@@ -4,6 +4,11 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	-- use({
+	-- 	"svrana/neosolarized.nvim",
+	-- 	requires = { "tjdevries/colorbuddy.nvim" },
+	-- })
+
 	-- 主题 --
 	use("sainnhe/everforest")
 
@@ -34,8 +39,12 @@ return require("packer").startup(function(use)
 	})
 
 	-- formatting & linting
-	use("jose-elias-alvarez/typescript.nvim") -- configure formatters & linters
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	use({
+		"jose-elias-alvarez/null-ls.nvim",
+		requires = {
+			"jose-elias-alvarez/typescript.nvim",
+		},
+	}) -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
 	-- 自动补全 --
@@ -50,6 +59,7 @@ return require("packer").startup(function(use)
 	use("windwp/nvim-autopairs")
 	use("windwp/nvim-ts-autotag")
 
+	use("onsails/lspkind-nvim") -- vscode-like pictograms
 	-- 注释 --
 	use({
 		"numToStr/Comment.nvim",
@@ -66,7 +76,7 @@ return require("packer").startup(function(use)
 
 	-- Git --
 	use("lewis6991/gitsigns.nvim")
-	use("dinhhuy258/git.nvim") -- For git blame & browse
+	-- use("dinhhuy258/git.nvim") -- For git blame & browse
 	use({
 		"sindrets/diffview.nvim",
 		requires = {
@@ -107,5 +117,5 @@ return require("packer").startup(function(use)
 	})
 
 	-- Startup --
-	-- use("mhinz/vim-startify")
+	use("mhinz/vim-startify")
 end)

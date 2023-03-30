@@ -1,9 +1,9 @@
 local opt = vim.opt
 
 -- 编码 --
-vim.scriptencoding = 'utf-8'
-opt.encoding = 'utf-8'
-opt.fileencoding = 'utf-8'
+vim.scriptencoding = "utf-8"
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
 
 -- 行号
 opt.relativenumber = true
@@ -38,6 +38,7 @@ opt.smartcase = true
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
+opt.shm = "I"
 vim.cmd("colorscheme everforest")
 
 -- 编辑 --
