@@ -39,7 +39,7 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.shm = "I"
-vim.cmd("colorscheme everforest")
+-- vim.cmd("colorscheme everforest")
 
 -- 编辑 --
 opt.swapfile = false
