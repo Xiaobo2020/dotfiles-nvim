@@ -25,8 +25,8 @@ return require('packer').startup(function(use)
   use("mhinz/vim-startify")
 
   -- 主题
-  -- require("pack/everforest").config()
-  -- use({'sainnhe/everforest', config = "require('pack/everforest').setup()"})
+  require("pack/everforest").config()
+  use({'sainnhe/everforest', config = "require('pack/everforest').setup()"})
 
   -- 快速跳转
   require("pack/leap").config()
@@ -36,7 +36,27 @@ return require('packer').startup(function(use)
   use("tpope/vim-surround")
 
   -- 快速多行操作
-  use("mg979/vim-visual-multi")
+  use ("mg979/vim-visual-multi")
+
+  -- 语法高亮
+  require('pack/treesitter').config()
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    config = "require('pack/treesitter').setup()",
+    run = ':TSUpdate',
+    event = 'BufRead'
+  }
+  use { 'nvim-treesitter/playground', after = 'nvim-treesitter' }
+
+	-- 括号等自动补全 --
+  require("pack/autopairs").config()
+	use({ "windwp/nvim-autopairs", config = "require('pack/autopairs').setup()" })
+  require("pack/ts-autotag").config()
+	use({
+    "windwp/nvim-ts-autotag",
+    config = "require('pack/ts-autotag').setup()",
+    after = "nvim-treesitter"
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
