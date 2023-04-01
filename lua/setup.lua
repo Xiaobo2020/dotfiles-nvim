@@ -25,17 +25,20 @@ return require('packer').startup(function(use)
   use("mhinz/vim-startify")
 
   -- 主题
-  require("pack/everforest").config()
-  use({'sainnhe/everforest', config = "require('pack/everforest').setup()"})
+  -- require("pack/everforest").config()
+  -- use({'sainnhe/everforest', config = "require('pack/everforest').setup()"})
 
   -- 快速跳转
   require("pack/leap").config()
   use({ "ggandor/leap.nvim", config = "require('pack/leap').setup()" })
 
+  -- Surround
+  use("tpope/vim-surround")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
-    require('packer').sync()
+    require("packer").sync()
   end
 end)
 
