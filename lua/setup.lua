@@ -30,11 +30,11 @@ return require('packer').startup(function(use)
   require("pack/leap").config()
   use({ "ggandor/leap.nvim", config = "require('pack/leap').setup()" })
 
-  -- Surround
-  use("tpope/vim-surround")
+  -- TODO:Surround
+  -- use({ "tpope/vim-surround" })
 
   -- 快速多行操作
-  use ("mg979/vim-visual-multi")
+  use ({"mg979/vim-visual-multi", event = {"CursorHold"}})
 
   -- 语法高亮
   require('pack/treesitter').config()
@@ -48,24 +48,29 @@ return require('packer').startup(function(use)
 
 	-- 括号等自动补全 --
   require("pack/autopairs").config()
-	use({ "windwp/nvim-autopairs", config = "require('pack/autopairs').setup()" })
-  require("pack/ts-autotag").config()
 	use({
-    "windwp/nvim-ts-autotag",
-    config = "require('pack/ts-autotag').setup()",
-    after = "nvim-treesitter"
+    "windwp/nvim-autopairs",
+    config = "require('pack/autopairs').setup()",
+    event = { "InsertEnter" }
   })
+  -- TODO:
+  -- require("pack/ts-autotag").config()
+	-- use({
+  --   "windwp/nvim-ts-autotag",
+  --   config = "require('pack/ts-autotag').setup()",
+  --   after = "nvim-treesitter",
+  -- })
 
   -- markdown预览插件 导航生成插件
-  require('pack/markdown').config()
-  use { 'mzlogin/vim-markdown-toc', ft = 'markdown' }
-  use {
-    'iamcco/markdown-preview.nvim',
-    config = "require('pack/markdown').setup()",
-    run = 'cd app && npm install',
-    cmd = 'MarkdownPreview',
-    ft = 'markdown'
-  }
+  -- require('pack/markdown').config()
+  -- use { 'mzlogin/vim-markdown-toc', ft = 'markdown' }
+  -- use {
+  --   'iamcco/markdown-preview.nvim',
+  --   config = "require('pack/markdown').setup()",
+  --   run = 'cd app && npm install',
+  --   cmd = 'MarkdownPreview',
+  --   ft = 'markdown'
+  -- }
 
   -- 注释
   use({ "numToStr/Comment.nvim", after = "nvim-treesitter" })
