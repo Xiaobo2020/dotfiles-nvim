@@ -67,6 +67,20 @@ return require('packer').startup(function(use)
     ft = 'markdown'
   }
 
+  -- 注释
+  use {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    after = "nvim-treesitter"
+  }
+  require("pack/comment").config()
+  use({
+		"numToStr/Comment.nvim",
+		requires = {
+			"JoosepAlviste/nvim-ts-context-commentstring",
+		},
+    config = "require('pack/comment').setup()"
+	})
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
