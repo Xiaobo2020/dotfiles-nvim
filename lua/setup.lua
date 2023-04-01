@@ -35,6 +35,9 @@ return require('packer').startup(function(use)
   -- Surround
   use("tpope/vim-surround")
 
+  -- 快速多行操作
+  use("mg979/vim-visual-multi")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
