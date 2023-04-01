@@ -5,7 +5,7 @@ M.config = function()
 end
 
 M.setup = function()
-  G.cmd([[ colorscheme everforest ]])
+  require("leap").add_default_mappings()
 end
 
 return M

@@ -28,6 +28,10 @@ return require('packer').startup(function(use)
   require("pack/everforest").config()
   use({'sainnhe/everforest', config = "require('pack/everforest').setup()"})
 
+  -- 快速跳转
+  require("pack/leap").config()
+  use({ "ggandor/leap.nvim", config = "require('pack/leap').setup()" })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
