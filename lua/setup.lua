@@ -54,12 +54,13 @@ return require('packer').startup(function(use)
     event = { "InsertEnter" }
   })
   -- TODO:
-  -- require("pack/ts-autotag").config()
-	-- use({
-  --   "windwp/nvim-ts-autotag",
-  --   config = "require('pack/ts-autotag').setup()",
-  --   after = "nvim-treesitter",
-  -- })
+  require("pack/ts-autotag").config()
+	use({
+    "windwp/nvim-ts-autotag",
+    config = "require('pack/ts-autotag').setup()",
+    after = "nvim-treesitter",
+    event = { "InsertEnter", }
+  })
 
   -- markdown预览插件 导航生成插件
   -- require('pack/markdown').config()
