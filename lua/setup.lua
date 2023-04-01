@@ -68,18 +68,13 @@ return require('packer').startup(function(use)
   }
 
   -- 注释
+  use({ "numToStr/Comment.nvim", after = "nvim-treesitter" })
+  require("pack/comment").config()
   use {
     "JoosepAlviste/nvim-ts-context-commentstring",
-    after = "nvim-treesitter"
-  }
-  require("pack/comment").config()
-  use({
-		"numToStr/Comment.nvim",
-		requires = {
-			"JoosepAlviste/nvim-ts-context-commentstring",
-		},
+    after = "Comment.nvim",
     config = "require('pack/comment').setup()"
-	})
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
