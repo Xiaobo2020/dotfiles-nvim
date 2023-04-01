@@ -62,12 +62,12 @@ M.config = function ()
   -- some custom highlights
   G.hi({
     Todo = { fg = 234, bg = 38, bold = true };
-    TodoText = { fg = 38, bg = 'NONE', bold = true };
+    -- TodoText = { fg = 38, bg = 'NONE', bold = true };
     -- Note = { fg = 234, bg = 78, bold = true };
     -- NoteText = { fg = 78, bg = 'NONE', bold = true };
   })
-  G.cmd([[call matchadd('Todo', 'TODO:\{0,1\}')]])
-  G.cmd([[call matchadd('TodoText', 'TODO:\{0,1\}\zs.*')]])
+  G.cmd("call matchadd('Todo', 'TODO:')")
+  -- G.cmd([[call matchadd('TodoText', 'TODO:\{0,1\}\zs.*')]])
   -- G.cmd([[call matchadd('Note', 'NOTE:\{0,1\}')]])
   -- G.cmd([[call matchadd('NoteText', 'NOTE:\{0,1\}\zs.*')]])
 end
@@ -102,13 +102,15 @@ M.setup = function ()
       "python",
       "rust",
     },
+    sync_install = false,
+    auto_install = true,
     autotag = {
       enable = true,
     },
   })
 
-  M.parser_bootstrap()
-  G.cmd([[ au FileType * lua require('pack/treesitter').parser_bootstrap() ]])
+  -- M.parser_bootstrap()
+  -- G.cmd([[ au FileType * lua require('pack/treesitter').parser_bootstrap() ]])
 end
 
 return M

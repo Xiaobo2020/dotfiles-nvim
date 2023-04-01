@@ -5,9 +5,7 @@ local ensure_packer = function()
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
     fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    G.cmd([[
-      packadd packer.nvim
-    ]])
+    G.cmd("packadd packer.nvim")
     return true
   end
   return false
@@ -57,6 +55,17 @@ return require('packer').startup(function(use)
     config = "require('pack/ts-autotag').setup()",
     after = "nvim-treesitter"
   })
+
+  -- markdown预览插件 导航生成插件
+  require('pack/markdown').config()
+  use { 'mzlogin/vim-markdown-toc', ft = 'markdown' }
+  use {
+    'iamcco/markdown-preview.nvim',
+    config = "require('pack/markdown').setup()",
+    run = 'cd app && npm install',
+    cmd = 'MarkdownPreview',
+    ft = 'markdown'
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
