@@ -76,6 +76,15 @@ return require('packer').startup(function(use)
     config = "require('pack/comment').setup()"
   }
 
+  -- 通用图标
+  require("pack/web-devicons").config()
+  use({"nvim-tree/nvim-web-devicons", config = "require('pack/web-devicons').setup()"})
+
+  -- 状态栏
+  require("pack/lualine").config()
+  use({"nvim-lualine/lualine.nvim", config = "require('pack/lualine').setup()"})
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
