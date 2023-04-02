@@ -286,6 +286,15 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- LSP UIs --
+	require("pack.lspsaga").config()
+	use({
+		"glepnir/lspsaga.nvim",
+		config = function()
+			require("pack.lspsaga").setup()
+		end,
+	})
+
 	-- Telescope --
 	require("pack.telescope").config()
 	use({
