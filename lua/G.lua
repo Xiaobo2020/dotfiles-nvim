@@ -5,6 +5,7 @@ G.b = vim.b
 G.o = vim.o
 G.v = vim.v
 G.fn = vim.fn
+G.bo = vim.bo
 G.api = vim.api
 G.opt = vim.opt
 

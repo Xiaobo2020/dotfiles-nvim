@@ -46,8 +46,8 @@ return require('packer').startup(function(use)
   use {
     'nvim-treesitter/nvim-treesitter',
     config = "require('pack/treesitter').setup()",
-    run = ':TSUpdate',
-    event = 'BufRead'
+    -- run = ':TSUpdate',
+    -- event = 'BufRead'
   }
   use { 'nvim-treesitter/playground', after = 'nvim-treesitter' }
 
@@ -97,7 +97,11 @@ return require('packer').startup(function(use)
 
   -- 状态栏
   require("pack/lualine").config()
-  use({"nvim-lualine/lualine.nvim", config = "require('pack/lualine').setup()"})
+  use({
+    "nvim-lualine/lualine.nvim",
+    config = "require('pack/lualine').setup()",
+    event = { "BufRead" }
+  })
 
   -- 高亮{}范围
   require("pack/hlchunk").config()
@@ -106,6 +110,10 @@ return require('packer').startup(function(use)
     config = "require('pack/hlchunk').setup()",
     event = { "CursorMoved", "CursorMovedI" },
   }
+
+  -- 文件管理器
+  require('pack/nvim-tree').config()
+  use { 'nvim-tree/nvim-tree.lua', config = "require('pack/nvim-tree').setup()", cmd = { 'NvimTreeToggle', 'NvimTreeFindFileToggle' } }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

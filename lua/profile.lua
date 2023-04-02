@@ -27,6 +27,7 @@ G.opt.shiftwidth = 2
 G.opt.smarttab = true
 G.opt.expandtab = true
 G.opt.backup = false
+G.opt.writebackup = false
 G.opt.swapfile = false
 G.opt.wrap = false
 G.opt.undofile = true
