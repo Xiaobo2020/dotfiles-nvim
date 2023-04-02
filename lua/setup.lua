@@ -177,8 +177,9 @@ return require("packer").startup(function(use)
 			require("pack.mason").setup()
 		end,
 	})
-	use("jose-elias-alvarez/typescript.nvim")
+
 	-- lspconfig
+	use("jose-elias-alvarez/typescript.nvim")
 	require("pack.lspconfig").config()
 	use({
 		"neovim/nvim-lspconfig",
@@ -193,6 +194,7 @@ return require("packer").startup(function(use)
 			"mason-lspconfig.nvim",
 		},
 	})
+
 	-- mason-lspconfig
 	require("pack.mason-lspconfig").config()
 	use({
@@ -208,6 +210,7 @@ return require("packer").startup(function(use)
 			"mason.nvim",
 		},
 	})
+
 	-- null-ls
 	use("nvim-lua/plenary.nvim")
 	require("pack.null-ls").config()
@@ -217,6 +220,7 @@ return require("packer").startup(function(use)
 			require("pack.null-ls").setup()
 		end,
 	})
+
 	-- mason-null-ls
 	require("pack.mason-null-ls").config()
 	use({
@@ -231,6 +235,15 @@ return require("packer").startup(function(use)
 		after = {
 			"mason.nvim",
 		},
+	})
+
+	-- 颜色显示 --
+	require("pack.colorizer").config()
+	use({
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("pack.colorizer").setup()
+		end,
 	})
 
 	-- Automatically set up your configuration after cloning packer.nvim

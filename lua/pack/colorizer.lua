@@ -4,9 +4,8 @@ local M = {}
 M.config = function() end
 
 M.setup = function()
-	require("nvim-web-devicons").setup({
-		override = {},
-		default = true,
+	require("colorizer").setup({
+		"*",
 	})
 end
 
