@@ -2,23 +2,24 @@ local G = require("G")
 local M = {}
 
 M.config = function ()
-  -- what files are supported, default '*.ts,*.js,*.json,*.go,*.c,*.cpp,*.rs,*.h,*.hpp,*.lua'
-  G.g.hlchunk_files = {"*.ts","*.js","*.json","*.go","*.c","*.cpp","*.rs","*.h","*.hpp","*.lua" }
-  -- hlchunk indentline highlight
-  G.cmd([[au VimEnter * hi HLIndentLine ctermfg=244]])
-  -- delay default 50
-  G.g.hlchunk_time_delay = 50
-  -- indentline chars(Anti-Clockwise) default ['─', '─', '╭', '│', '╰', '─', '>']
-  G.g.hlchunk_chars={'─', '─', '╭', '│', '╰', '─', '>'}
-  -- hlchunk_line_limit default 5000
-  G.g.hlchunk_line_limit = 5000
-  -- hlchunk_col_limit default 500
-  G.g.hlchunk_col_limit = 500
-  -- hi style default 'ctermfg=244'
-  G.g.hlchunk_hi_style = 'ctermfg=244'
+  -- do nothing
 end
 
 M.setup = function ()
+  require("hlchunk").setup({
+    chunk = {
+      enable = true,
+    },
+    indent= {
+      enable= false,
+    },
+    line_num= {
+      enable= true 
+    },
+    blank= {
+      enable= false
+    }
+  })
 end
 
 return M

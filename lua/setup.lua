@@ -98,9 +98,9 @@ return require('packer').startup(function(use)
   -- 高亮{}范围
   require("pack/hlchunk").config()
   use {
-    'yaocccc/nvim-hlchunk',
+    "shellRaining/hlchunk.nvim",
     config = "require('pack/hlchunk').setup()",
-    event = { 'CursorMoved', 'CursorMovedI' }
+    event = { "CursorMoved", "CursorMovedI" },
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
