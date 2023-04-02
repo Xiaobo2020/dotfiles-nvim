@@ -30,8 +30,13 @@ return require('packer').startup(function(use)
   require("pack/leap").config()
   use({ "ggandor/leap.nvim", config = "require('pack/leap').setup()" })
 
-  -- TODO:Surround
-  -- use({ "tpope/vim-surround" })
+  -- Surround
+  require("pack/surround").config()
+  use({
+    "tpope/vim-surround",
+    config = "require('pack/surround').setup()",
+    event = { "CursorMoved" }
+  })
 
   -- 快速多行操作
   use ({"mg979/vim-visual-multi", event = {"CursorHold"}})
