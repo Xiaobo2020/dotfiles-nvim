@@ -187,6 +187,7 @@ return require("packer").startup(function(use)
 		end,
 		requires = {
 			"jose-elias-alvarez/typescript.nvim",
+			"hrsh7th/cmp-nvim-lsp",
 		},
 		after = {
 			"mason-lspconfig.nvim",

@@ -127,11 +127,6 @@ M.setup = function()
     end,
     lua_ls = function()
       require("lspconfig").lua_ls.setup(G.tbl_extend("force", lsp_configs, {
-        on_attach = function(client, bufnr)
-          on_attach(client, bufnr)
-          -- Replace with stylua
-          -- enable_format_on_save(client, bufnr)
-        end,
         settings = {
           Lua = {
             diagnostics = {
