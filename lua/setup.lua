@@ -277,6 +277,15 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- lspkind
+	require("pack.lspkind").config()
+	use({
+		"onsails/lspkind-nvim",
+		config = function()
+			require("pack.lspkind").config()
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
