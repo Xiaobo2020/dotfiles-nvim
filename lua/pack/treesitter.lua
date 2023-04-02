@@ -88,6 +88,7 @@ M.setup = function ()
     },
     ensure_installed = {
       "tsx",
+      "typescript",
       "javascript",
       "html",
       "css",
@@ -109,8 +110,8 @@ M.setup = function ()
     },
   })
 
-  -- M.parser_bootstrap()
-  -- G.cmd([[ au FileType * lua require('pack/treesitter').parser_bootstrap() ]])
+  M.parser_bootstrap()
+  G.cmd([[ au FileType * lua require('pack/treesitter').parser_bootstrap() ]])
 end
 
 return M
