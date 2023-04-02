@@ -9,6 +9,11 @@ G.bo = vim.bo
 G.api = vim.api
 G.opt = vim.opt
 
+G.lsp = vim.lsp
+G.tbl_extend = vim.tbl_extend
+G.diagnostic = vim.diagnostic
+G.keymap = vim.keymap
+
 function G.map(maps)
     for _,map in pairs(maps) do
         G.api.nvim_set_keymap(map[1], map[2], map[3], map[4])
