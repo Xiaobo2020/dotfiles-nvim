@@ -95,6 +95,13 @@ return require('packer').startup(function(use)
   require("pack/lualine").config()
   use({"nvim-lualine/lualine.nvim", config = "require('pack/lualine').setup()"})
 
+  -- 高亮{}范围
+  require("pack/hlchunk").config()
+  use {
+    'yaocccc/nvim-hlchunk',
+    config = "require('pack/hlchunk').setup()",
+    event = { 'CursorMoved', 'CursorMovedI' }
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
