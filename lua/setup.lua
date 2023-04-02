@@ -92,18 +92,18 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- -- markdown预览插件 导航生成插件
-	-- require("pack.markdown").config()
-	-- use({ "mzlogin/vim-markdown-toc", ft = "markdown" })
-	-- use({
-	-- 	"iamcco/markdown-preview.nvim",
-	-- 	config = function()
-	-- 		require("pack.markdown").setup()
-	-- 	end,
-	-- 	run = "cd app && npm install",
-	-- 	cmd = "MarkdownPreview",
-	-- 	ft = "markdown",
-	-- })
+	-- markdown预览插件 导航生成插件
+	require("pack.markdown").config()
+	use({ "mzlogin/vim-markdown-toc", ft = "markdown" })
+	use({
+		"iamcco/markdown-preview.nvim",
+		config = function()
+			require("pack.markdown").setup()
+		end,
+		run = "cd app && npm install",
+		cmd = "MarkdownPreview",
+		ft = "markdown",
+	})
 
 	-- 注释
 	use({ "numToStr/Comment.nvim", after = "nvim-treesitter" })
