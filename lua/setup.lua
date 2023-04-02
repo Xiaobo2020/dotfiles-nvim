@@ -264,6 +264,19 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- Git Diff
+	require("pack.diffview").config()
+	use({
+		"sindrets/diffview.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("pack.diffview").setup()
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
