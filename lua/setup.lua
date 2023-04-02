@@ -286,6 +286,19 @@ return require("packer").startup(function(use)
 		end,
 	})
 
+	-- Telescope --
+	require("pack.telescope").config()
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-file-browser.nvim",
+		},
+		config = function()
+			require("pack.telescope").setup()
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
