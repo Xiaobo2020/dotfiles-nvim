@@ -152,7 +152,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require("pack.nvim-tree").setup()
 		end,
-		cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
+		-- cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
 	})
 
 	-- 自动补全 --
@@ -243,6 +243,15 @@ return require("packer").startup(function(use)
 		"norcalli/nvim-colorizer.lua",
 		config = function()
 			require("pack.colorizer").setup()
+		end,
+	})
+
+	-- Tab分隔 --
+	require("pack.bufferline").config()
+	use({
+		"akinsho/bufferline.nvim",
+		config = function()
+			require("pack.bufferline").setup()
 		end,
 	})
 
