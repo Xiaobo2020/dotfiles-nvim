@@ -67,6 +67,10 @@ return require('packer').startup(function(use)
     event = { "InsertEnter", }
   })
 
+  -- 浮动终端
+  require('pack/floaterm').config()
+  use { 'voldikss/vim-floaterm', config = "require('pack/floaterm').setup()" }
+
   -- markdown预览插件 导航生成插件
   -- require('pack/markdown').config()
   -- use { 'mzlogin/vim-markdown-toc', ft = 'markdown' }
