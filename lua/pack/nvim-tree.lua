@@ -60,29 +60,86 @@ function M.setup()
 	nvim_tree.setup({
 		sort_by = "case_sensitive",
 		actions = {
-			open_file = { quit_on_open = true },
+			open_file = {
+				quit_on_open = false,
+				window_picker = {
+					enable = false,
+				},
+			},
+		},
+		view = {
+			mappings = {
+				list = {
+					{ key = "<Esc>", action = "close" },
+					{ key = "<C-t>", action = "close" },
+					-- { key = "P", action = "cd" },
+					-- { key = "<BS>", action = "dir_up" },
+					-- { key = "<Tab>", action = "expand" },
+					-- { key = "<Right>", action = "expand" },
+					-- { key = "<Left>", action = "close_node" },
+					-- { key = ")", action = "next_git_item" },
+					-- { key = "(", action = "prev_git_item" },
+					-- { key = ">", action = "next_diag_item" },
+					-- { key = "<", action = "prev_diag_item" },
+					-- { key = "?", action = "toggle_help" },
+					-- { key = "A", action = "create" },
+					-- { key = "C", action = "" },
+				},
+			},
+			float = {
+				enable = false,
+				open_win_config = function()
+					local columns = G.o.columns
+					local lines = G.o.lines
+					local width = math.max(math.floor(columns * 0.5), 50)
+					local height = math.max(math.floor(lines * 0.5), 20)
+					local left = math.ceil((columns - width) * 0.5)
+					local top = math.ceil((lines - height) * 0.5 - 2)
+					return {
+						relative = "editor",
+						border = "rounded",
+						width = width,
+						height = height,
+						row = top,
+						col = left,
+					}
+				end,
+			},
 		},
 		update_focused_file = {
 			enable = true,
 			update_cwd = true,
+			update_root = false,
+			ignore_list = {},
+		},
+		renderer = {
+			group_empty = true,
+			indent_markers = { enable = true },
+			icons = {
+				git_placement = "signcolumn",
+				-- git_placement = "before",
+				webdev_colors = true,
+				glyphs = {
+					git = {
+						unstaged = "~",
+						staged = "✓",
+						unmerged = "",
+						renamed = "+",
+						untracked = "?",
+						deleted = "",
+						ignored = " ",
+					},
+					folder = { empty = "", empty_open = "" },
+				},
+			},
 		},
 		filters = {
 			dotfiles = false,
 			custom = { "^.git$", "^.vscode$" },
 		},
-		git = {
-			enable = true,
-			ignore = false,
-		},
-		log = {
-			enable = true,
-			types = {
-				diagnostics = true,
-			},
-		},
 		diagnostics = {
 			enable = false,
-			show_on_dirs = false,
+			show_on_dirs = true,
 			debounce_delay = 50,
 			icons = {
 				hint = "H",
@@ -91,11 +148,16 @@ function M.setup()
 				error = "E",
 			},
 		},
-		renderer = {
-			icons = {
-				git_placement = "signcolumn",
-			},
-		},
+		-- git = {
+		-- 	enable = true,
+		-- 	ignore = false,
+		-- },
+		-- log = {
+		-- 	enable = true,
+		-- 	types = {
+		-- 		diagnostics = true,
+		-- 	},
+		-- },
 	})
 end
 

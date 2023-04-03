@@ -1,6 +1,10 @@
 local G = require("G")
 
 -- G.g.python3_host_prog = os.getenv('PYTHON') -- export PYTHON=$(which python3)
+-- disable netrw at the very start of your init.lua (strongly advised)
+G.g.loaded_netrw = 1
+G.g.loaded_netrwPlugin = 1
+
 G.opt.showcmd = true
 G.opt.encoding = "utf-8"
 G.opt.wildmenu = true
