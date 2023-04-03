@@ -87,7 +87,7 @@ function M.setup()
 				},
 			},
 			float = {
-				enable = false,
+				enable = true,
 				open_win_config = function()
 					local columns = G.o.columns
 					local lines = G.o.lines

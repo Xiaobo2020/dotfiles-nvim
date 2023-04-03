@@ -14,20 +14,20 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require("packer").startup({
-	config = {
-		git = { clone_timeout = 120, depth = 1 },
-		display = {
-			working_sym = "[ ]",
-			error_sym = "[✗]",
-			done_sym = "[✓]",
-			removed_sym = " - ",
-			moved_sym = " → ",
-			header_sym = "─",
-			open_fn = function()
-				return require("packer.util").float({ border = "rounded" })
-			end,
-		},
-	},
+	-- config = {
+	-- 	git = { clone_timeout = 120, depth = 1 },
+	-- 	display = {
+	-- 		working_sym = "[ ]",
+	-- 		error_sym = "[✗]",
+	-- 		done_sym = "[✓]",
+	-- 		removed_sym = " - ",
+	-- 		moved_sym = " → ",
+	-- 		header_sym = "─",
+	-- 		open_fn = function()
+	-- 			return require("packer.util").float({ border = "rounded" })
+	-- 		end,
+	-- 	},
+	-- },
 	function(use)
 		use("wbthomason/packer.nvim")
 
@@ -53,6 +53,7 @@ return require("packer").startup({
 			config = function()
 				require("pack.leap").setup()
 			end,
+			event = { "BufRead" },
 		})
 
 		-- Surround
@@ -62,7 +63,7 @@ return require("packer").startup({
 			config = function()
 				require("pack.surround").setup()
 			end,
-			event = { "CursorMoved" },
+			event = { "BufRead" },
 		})
 
 		-- 快速多行操作
@@ -75,8 +76,6 @@ return require("packer").startup({
 			config = function()
 				require("pack.treesitter").setup()
 			end,
-			-- run = ':TSUpdate',
-			-- event = 'BufRead'
 		})
 		use({ "nvim-treesitter/playground", after = "nvim-treesitter" })
 
@@ -105,6 +104,7 @@ return require("packer").startup({
 			config = function()
 				require("pack.floaterm").setup()
 			end,
+			-- cmd = { "FloatermNew", "FloatermToggle" },
 		})
 
 		-- markdown预览插件 导航生成插件
@@ -129,6 +129,7 @@ return require("packer").startup({
 			config = function()
 				require("pack.comment").setup()
 			end,
+			event = { "BufRead" },
 		})
 
 		-- 通用图标
@@ -265,6 +266,7 @@ return require("packer").startup({
 			config = function()
 				require("pack.colorizer").setup()
 			end,
+			event = { "BufRead" },
 		})
 
 		-- Tab分隔 --
