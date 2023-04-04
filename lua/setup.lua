@@ -172,9 +172,9 @@ return require("packer").startup({
 		})
 
 		-- 自动补全 --
-		use({ "saadparwaiz1/cmp_luasnip", after = { "nvim-cmp" } })
-		use("hrsh7th/cmp-nvim-lsp")
-		use({ "hrsh7th/cmp-path", after = { "nvim-cmp" } })
+		use({ "saadparwaiz1/cmp_luasnip" })
+		use({ "hrsh7th/cmp-nvim-lsp" })
+		use({ "hrsh7th/cmp-path" })
 		use("L3MON4D3/LuaSnip")
 		-- use("rafamadriz/friendly-snippets")
 		require("pack.nvim-cmp").config()
@@ -188,7 +188,6 @@ return require("packer").startup({
 				-- "hrsh7th/cmp-path",
 				-- "L3MON4D3/LuaSnip",
 			},
-			event = { "InsertEnter" },
 		})
 
 		-- mason
