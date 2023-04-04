@@ -46,6 +46,19 @@ set --universal nvm_default_version v16.19.0
 set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint_d vscode-langservers-extracted
 ```
 
+or write the packages to the `~/.nvm/default-packages`
+
+```
+@tailwindcss/language-server
+eslint_d
+neovim
+nrm
+open@8.4.2
+typescript-language-server
+typescript
+vscode-langservers-extracted
+```
+
 ## iTerm2 theme
 
 1. Download source of colorscheme from [Gogh](https://github.com/Gogh-Co/Gogh)
@@ -78,18 +91,12 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-Open `~/.config/nvim/init.lua` by `vim`, then
-1. run `:PackerInstall`
-2. run `:Mason`
-3. Once everything is ready, run `:checkhealth` to verify status
-```bash
-vim ~/.config/nvim/init.lua
-```
+Give execute permission for `~/.config/nvim/startup.sh` and then execute it
 
-Fix error caused by highlights.scm of treesitter
 ```bash
-cd ~/.local/share/nvim/site/pack/packer/start/nvim-treesitter/queries/vim/
-mv highlights.scm highlights.scm.bak
+cd ~/.config/nvim
+chmod +x startup.sh
+./startup.sh
 ```
 
 ## Keymaps
@@ -128,7 +135,7 @@ Leader key: `" "`
 | `n` | `<leader>fg` |  | 打开Telescope进行基于内容的搜索 |
 | `n` | `<leader>fb` |  | 打开Telescope进行基于Buffer的搜索 |
 | `n` | `<leader>fh` |  | 打开Telescope进行基于Help Tag的搜索 |
-| `n` | `<leader>tt` |  | 打开Floating terminal |
+| `n` | `<C-t>` |  | 打开/关闭Floating terminal |
 | `n` | `<leader>jn` |  | 显示下一个Diagnostic提示 |
 | `n` | `<leader>jp` |  | 显示上一个Diagnostic提示 |
 | `n` | `<leader>l` |  | 显示当前行的Diagnostic提示 |
