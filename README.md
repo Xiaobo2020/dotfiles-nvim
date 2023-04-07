@@ -365,5 +365,12 @@ possible keymaps starting with `<space>`.
 | <code>&lt;leader&gt;mtl</code> | Generate toc in GitLab | **n** |
 | <code>&lt;leader&gt;mtm</code> | Generate toc in Marked | **n** |
 
+## [vim-floaterm](https://github.com/voldikss/vim-floaterm)
+
+| Key | Description | Mode |
+| --- | --- | --- |
+| <code>&lt;C-t&gt;</code> | Float terminal toggle | **n** |
+| <code>&lt;C-t&gt;</code> | Float terminal toggle | **t** |
+
 <!-- keymaps:end -->
 
