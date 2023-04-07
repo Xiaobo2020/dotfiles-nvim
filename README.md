@@ -350,5 +350,20 @@ possible keymaps starting with `<space>`.
 | <code>]]</code> | Next Reference | **n** |
 | <code>[[</code> | Prev Reference | **n** |
 
+## [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+
+| Key | Description | Mode |
+| --- | --- | --- |
+| <code>&lt;leader&gt;mp</code> | MarkdownPreview start | **n** |
+| <code>&lt;leader&gt;ms</code> | MarkdownPreview stop | **n** |
+
+## [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc)
+
+| Key | Description | Mode |
+| --- | --- | --- |
+| <code>&lt;leader&gt;mth</code> | Generate toc in GitHub | **n** |
+| <code>&lt;leader&gt;mtl</code> | Generate toc in GitLab | **n** |
+| <code>&lt;leader&gt;mtm</code> | Generate toc in Marked | **n** |
+
 <!-- keymaps:end -->
 
