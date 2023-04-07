@@ -4,7 +4,15 @@ return {
     opts = {
       servers = {
         tailwindcss = {},
-        cssls = {},
+        cssls = {
+          settings = {
+            css = {
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+          },
+        },
         html = {},
       },
     },
