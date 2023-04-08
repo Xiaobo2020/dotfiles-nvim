@@ -64,6 +64,9 @@ return {
           node_decremental = "<bs>",
         },
       },
+      autotag = {
+        enable = true,
+      },
     },
     ---@param opts TSConfig
     config = function(_, opts)
