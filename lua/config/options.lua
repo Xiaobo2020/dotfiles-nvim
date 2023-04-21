@@ -34,10 +34,17 @@ vim.opt.wrap = false
 vim.opt.undofile = true
 vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/cache/undodir"
 vim.opt.viminfo = "!,'10000,<50,s10,h"
-vim.opt.foldenable = true
-vim.opt.foldmethod = "manual"
-vim.opt.viewdir = os.getenv("HOME") .. "/.config/nvim/cache/viewdir"
+
+-- vim.opt.foldenable = true
+-- vim.opt.foldmethod = "manual"
+
+vim.opt.foldenable = false
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
 vim.opt.foldtext = "v:lua.MagicFoldText()"
+vim.opt.viewdir = os.getenv("HOME") .. "/.config/nvim/cache/viewdir"
+
 vim.opt.cmdheight = 1
 vim.opt.updatetime = 300
 vim.opt.shortmess = "filnxtToOScIF"
