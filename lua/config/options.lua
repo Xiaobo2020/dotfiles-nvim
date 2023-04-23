@@ -39,9 +39,10 @@ vim.opt.viminfo = "!,'10000,<50,s10,h"
 -- vim.opt.foldmethod = "manual"
 
 vim.opt.foldenable = false
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldmethod = "indent"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
+
 vim.opt.foldtext = "v:lua.MagicFoldText()"
 vim.opt.viewdir = os.getenv("HOME") .. "/.config/nvim/cache/viewdir"
 
