@@ -110,4 +110,18 @@ return {
       current_line_blame_formatter = "      <author>, <author_time:%Y-%m-%d> - <summary>",
     },
   },
+
+  -- fuzzy finder
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = {
+      defaults = {
+        layout_strategy = "vertical",
+        layout_config = {
+          width = 0.95,
+          height = 0.95,
+        },
+      },
+    },
+  },
 }
