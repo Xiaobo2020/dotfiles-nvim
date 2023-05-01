@@ -1,6 +1,7 @@
 ## Screenshot
 
-![Screenshot](./images/Screenshot_LazyVim.png)
+- ![Screenshot - Everforest](./images/Screenshot_LazyVim_Everforest.png)
+- ![Screenshot - Catppuccin](./images/Screenshot_LazyVim_Catppuccin.png)
 
 ## Fish shell
 
@@ -49,7 +50,7 @@ And these packages below are **ALL** needed in my nvim config.
 
 ```bash
 set --universal nvm_default_version v16.19.0
-set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint_d vscode-langservers-extracted
+set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint_d vscode-langservers-extracted sql-language-server
 ```
 
 or write the packages to the `~/.nvm/default-packages`
@@ -63,14 +64,28 @@ open@8.4.2
 typescript-language-server
 typescript
 vscode-langservers-extracted
+sql-language-server
+```
+
+You can also install [tide](https://github.com/IlanCosman/tide/tree/447945d2cff8f70d5c791dd4eec8b322d37798dd) to custom your theme of shell.
+
+```bash
+fisher install IlanCosman/tide@v5
 ```
 
 ## iTerm2 theme
+
+### Everforest
 
 1. Download source of colorscheme from [Gogh](https://github.com/Gogh-Co/Gogh)
 2. Install `Everforest Dark`
 3. Open iTerm2 preferences by `<Command>,`
 4. Set `Profiles` > `Colors` > `Color Presets` with `Everforest Dark`
+
+### Catppuccin
+
+1. Download source of colorscheme from [Catppuccin Iterm](https://github.com/catppuccin/iterm)
+2. Import color presets.
 
 ## Neovim
 
