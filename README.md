@@ -71,6 +71,8 @@ You can also install [tide](https://github.com/IlanCosman/tide/tree/447945d2cff8
 
 ```bash
 fisher install IlanCosman/tide@v5
+
+tide configure
 ```
 
 ## iTerm2 theme
