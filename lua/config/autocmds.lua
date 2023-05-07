@@ -8,3 +8,6 @@
 --     autocmd BufRead * autocmd BufWinEnter * ++once normal! zx
 --   augroup end
 -- ]])
+
+vim.cmd("autocmd BufEnter * set formatoptions-=cro")
+vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
