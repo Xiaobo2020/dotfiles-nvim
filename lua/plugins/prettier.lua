@@ -14,7 +14,9 @@ return {
         nls.builtins.formatting.prettier.with({
           filetypes = {
             "javascript",
+            "javascriptreact",
             "typescript",
+            "typescriptreact",
             "json",
             "markdown",
             "md",
