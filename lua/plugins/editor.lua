@@ -97,6 +97,7 @@ return {
         ["<leader>w"] = { name = "+windows" },
         ["<leader>x"] = { name = "+diagnostics/quickfix" },
         ["<leader>m"] = { name = "+markdown" },
+        ["<leader>h"] = { name = "+hover" },
       },
     },
     config = function(_, opts)
@@ -134,6 +135,39 @@ return {
           height = 0.95,
         },
       },
+    },
+  },
+
+  -- better diagnostics list and others
+  {
+    "folke/trouble.nvim",
+    cmd = { "TroubleToggle", "Trouble" },
+    opts = { use_diagnostic_signs = true },
+    keys = {
+      { "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)" },
+      { "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics (Trouble)" },
+      { "<leader>xL", "<cmd>TroubleToggle loclist<cr>", desc = "Location List (Trouble)" },
+      { "<leader>xQ", "<cmd>TroubleToggle quickfix<cr>", desc = "Quickfix List (Trouble)" },
+    },
+  },
+
+  {
+    "glepnir/lspsaga.nvim",
+    event = "LspAttach",
+    keys = {
+      { "<leader>h", "<cmd>Lspsaga hover_doc<cr>", desc = "Hover" },
+      { "<leader>xc", "<cmd>Lspsaga show_cursor_diagnostics<cr>", desc = "Cursor Diagnostics (Trouble)" },
+      { "<leader>xs", "<cmd>Lspsaga show_line_diagnostics<cr>", desc = "Line Diagnostics (Trouble)" },
+      { "[q", "<cmd>Lspsaga diagnostic_jump_prev<cr>", desc = "Previous trouble/quickfix item" },
+      { "]q", "<cmd>Lspsaga diagnostic_jump_next<cr>", desc = "Next trouble/quickfix item" },
+    },
+    config = function()
+      require("lspsaga").setup({})
+    end,
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons" },
+      --Please make sure you install markdown and markdown_inline parser
+      { "nvim-treesitter/nvim-treesitter" },
     },
   },
 }
