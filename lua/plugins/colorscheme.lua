@@ -4,6 +4,7 @@ return {
     "sainnhe/everforest",
     lazy = true,
     name = "everforest",
+    enabled = false,
   },
 
   -- catppuccin

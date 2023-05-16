@@ -6,8 +6,6 @@ return {
     end,
   },
 
-  -- disable comments
-  { "echasnovski/mini.comment", enabled = false },
   {
     "numToStr/Comment.nvim",
     dependencies = {

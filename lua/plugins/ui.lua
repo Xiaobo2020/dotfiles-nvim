@@ -69,9 +69,6 @@ return {
     },
   },
 
-  -- disable indent-blankline.nvim
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
-
   -- indent guides for Neovim hlchunk
   {
     "shellRaining/hlchunk.nvim",
