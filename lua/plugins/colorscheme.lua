@@ -1,15 +1,23 @@
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "everforest",
+    },
+  },
+
   -- everforest
   {
     "sainnhe/everforest",
     lazy = true,
     name = "everforest",
-    enabled = false,
+    enabled = true,
   },
 
   -- catppuccin
   {
     "catppuccin/nvim",
+    enabled = true,
     lazy = true,
     name = "catppuccin",
     opts = {
@@ -57,11 +65,5 @@ return {
     config = function(_, opts)
       require("catppuccin").setup(opts)
     end,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin",
-    },
   },
 }
