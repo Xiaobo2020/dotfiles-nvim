@@ -58,6 +58,8 @@ vim.opt.cul = true
 vim.opt.signcolumn = "yes"
 vim.opt.fillchars = "fold:-,stlnc:#,eob: ,foldsep:="
 vim.opt.termguicolors = true
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 function MagicFoldText()
   local spacetext = ("        "):sub(0, vim.opt.shiftwidth:get())
