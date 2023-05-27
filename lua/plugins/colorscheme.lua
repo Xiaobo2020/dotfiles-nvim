@@ -2,8 +2,15 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "nordfox",
     },
+  },
+
+  -- nightfox
+  {
+    "EdenEast/nightfox.nvim",
+    name = "nightfox",
+    enabled = true,
   },
 
   -- everforest
@@ -11,13 +18,13 @@ return {
     "sainnhe/everforest",
     lazy = true,
     name = "everforest",
-    enabled = true,
+    enabled = false,
   },
 
   -- catppuccin
   {
     "catppuccin/nvim",
-    enabled = true,
+    enabled = false,
     lazy = true,
     name = "catppuccin",
     opts = {
