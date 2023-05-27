@@ -1,7 +1,13 @@
 ## Screenshot
 
-- ![Screenshot - Everforest](./images/Screenshot_LazyVim_Everforest.png)
-- ![Screenshot - Catppuccin](./images/Screenshot_LazyVim_Catppuccin.png)
+Everforest
+![Screenshot - Everforest](./images/Screenshot_LazyVim_Everforest.png)
+
+Catppuccin - mocha
+![Screenshot - Catppuccin](./images/Screenshot_LazyVim_Catppuccin.png)
+
+Nightfox - nordfox
+![Screenshot - Nightfox](./images/Screenshot_LazyVim_Nightfox.png)
 
 ## Fish shell
 
@@ -88,6 +94,11 @@ tide configure
 
 1. Download source of colorscheme from [Catppuccin Iterm](https://github.com/catppuccin/iterm)
 2. Import color presets.
+
+### Nightfox
+
+1. Download source of colorscheme from [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim)
+2. Import target color preset: `/nightfox.nvim/extra/*/nightfox_iterm.itermcolors`.
 
 ## Neovim
 
