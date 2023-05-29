@@ -124,16 +124,20 @@ return {
     },
   },
 
-  -- fuzzy finder
+  -- fuzzy finder: change some telescope options
   {
     "nvim-telescope/telescope.nvim",
+    -- change some options
     opts = {
       defaults = {
         layout_strategy = "vertical",
         layout_config = {
-          width = 0.95,
-          height = 0.95,
+          -- prompt_position = "top",
+          width = 0.90,
+          height = 0.90,
         },
+        sorting_strategy = "ascending",
+        winblend = 0,
       },
     },
   },
