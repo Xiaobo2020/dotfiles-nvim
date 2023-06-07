@@ -108,6 +108,12 @@ Install `neovim` by brew and some dependencies used later
 brew install neovim ripgrep fd lazygit
 ```
 
+If `brew` is not found in fish shell, we can add it to the path of fish with below command:
+
+```
+fish_add_path /opt/homebrew/bin
+```
+
 Alias `vim` to `nvim` by setting in fish
 
 ```bash
