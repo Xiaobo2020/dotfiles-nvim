@@ -13,10 +13,11 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
-local opts = { desc = "Select all", silent = true, noremap = true }
-
 -- select all
-map("n", "<C-a>", "gg<S-v>G", opts)
+map("n", "<C-a>", "gg<S-v>G", { desc = "Select all", silent = true, noremap = true })
 
 -- ESC
-map("i", "jk", "<ESC>", opts)
+map("i", "jk", "<ESC>", { desc = "ESC", silent = true, noremap = true })
+
+-- LSP Finder
+map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { desc = "LSP Finder", silent = true, noremap = true })

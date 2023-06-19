@@ -18,13 +18,13 @@ return {
     "sainnhe/everforest",
     lazy = true,
     name = "everforest",
-    enabled = false,
+    enabled = true,
   },
 
   -- catppuccin
   {
     "catppuccin/nvim",
-    enabled = false,
+    enabled = true,
     lazy = true,
     name = "catppuccin",
     opts = {
