@@ -216,6 +216,7 @@ possible keymaps starting with `<space>`.
 | ----------------------------- | -------------------- | ------------ |
 | <code>&lt;leader&gt;cd</code> | Line Diagnostics     | **n**        |
 | <code>&lt;leader&gt;cl</code> | Lsp Info             | **n**        |
+| <code>gh</code>               | LSP Finder           | **n**        |
 | <code>gd</code>               | Goto Definition      | **n**        |
 | <code>gr</code>               | References           | **n**        |
 | <code>gD</code>               | Goto Declaration     | **n**        |
