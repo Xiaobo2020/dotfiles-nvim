@@ -1,15 +1,31 @@
 ## Screenshot
 
+Nightfox - nordfox
+![Screenshot - Nightfox](./images/Screenshot_LazyVim_Nightfox.png)
+
 Everforest
 ![Screenshot - Everforest](./images/Screenshot_LazyVim_Everforest.png)
 
 Catppuccin - mocha
 ![Screenshot - Catppuccin](./images/Screenshot_LazyVim_Catppuccin.png)
 
-Nightfox - nordfox
-![Screenshot - Nightfox](./images/Screenshot_LazyVim_Nightfox.png)
+## Terminal - iTerm2
 
-## Fish shell
+### Install
+
+[Homebrew](https://brew.sh) is recommended.
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install **iterm2** with homebrew
+
+```bash
+brew install --cask iterm2
+```
+
+### Shell - Fish
 
 Install [ fish ](https://github.com/fish-shell/fish-shell) shell
 
@@ -38,11 +54,19 @@ echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
 
 Then, restart your terminal.
 
+Make sure command `brew --version` is ready in fish shell. If `brew` is not found in fish shell, we can add it to the path of fish with below command:
+
+```
+fish_add_path /opt/homebrew/bin
+```
+
 If your fish shell is ready, then install [fisher](https://github.com/jorgebucaran/fisher), the packages manager in fish:
 
 ```bash
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 ```
+
+### Node Environment - NVM
 
 Once fisher is ready, then install `nvm` to manage your node version:
 
@@ -51,11 +75,11 @@ fisher install jorgebucaran/nvm.fish
 ```
 
 Of course, we can set default node version and default packages.
-Here I use `v16.19.0` as my default node version.
+Here I use `v14.16.0` as my default node version.
 And these packages below are **ALL** needed in my nvim config.
 
 ```bash
-set --universal nvm_default_version v16.19.0
+set --universal nvm_default_version v14.16.0
 set --universal nvm_default_packages nrm open@8.4.2 neovim typescript typescript-language-server @tailwindcss/language-server eslint_d vscode-langservers-extracted sql-language-server
 ```
 
@@ -73,6 +97,8 @@ vscode-langservers-extracted
 sql-language-server
 ```
 
+### Shell Theme - Tide
+
 You can also install [tide](https://github.com/IlanCosman/tide/tree/447945d2cff8f70d5c791dd4eec8b322d37798dd) to custom your theme of shell.
 
 ```bash
@@ -81,24 +107,48 @@ fisher install IlanCosman/tide@v5
 tide configure
 ```
 
-## iTerm2 theme
+### Terminal Font
 
-### Everforest
+```bash
+brew tap homebrew/cask-fonts
+
+# Search your favourite font
+brew search font- | grep jetbrains
+# -> font-jetbrains-mono
+# -> font-jetbrains-mono-nerd-font
+
+# Install your favourite font
+brew install --cask font-jetbrains-mono-nerd-font
+```
+
+Then your can set your text font in iterm2
+
+`<Command>` + `,` > `Profiles` > `Text` > `Font` > Select `JetBrainsMono Nerd Font`
+
+### Terminal Theme
+
+#### Nightfox
+
+1. Download source of colorscheme from [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim)
+2. Import target color preset: `/nightfox.nvim/extra/*/nightfox_iterm.itermcolors`.
+
+![Screenshot - Nightfox](./images/Screenshot_LazyVim_Nightfox.png)
+
+#### Everforest
 
 1. Download source of colorscheme from [Gogh](https://github.com/Gogh-Co/Gogh)
 2. Install `Everforest Dark`
 3. Open iTerm2 preferences by `<Command>,`
 4. Set `Profiles` > `Colors` > `Color Presets` with `Everforest Dark`
 
-### Catppuccin
+![Screenshot - Everforest](./images/Screenshot_LazyVim_Everforest.png)
+
+#### Catppuccin
 
 1. Download source of colorscheme from [Catppuccin Iterm](https://github.com/catppuccin/iterm)
 2. Import color presets.
 
-### Nightfox
-
-1. Download source of colorscheme from [nightfox.nvim](https://github.com/EdenEast/nightfox.nvim)
-2. Import target color preset: `/nightfox.nvim/extra/*/nightfox_iterm.itermcolors`.
+![Screenshot - Catppuccin](./images/Screenshot_LazyVim_Catppuccin.png)
 
 ## Neovim
 
@@ -108,19 +158,13 @@ Install `neovim` by brew and some dependencies used later
 brew install neovim ripgrep fd lazygit
 ```
 
-If `brew` is not found in fish shell, we can add it to the path of fish with below command:
-
-```
-fish_add_path /opt/homebrew/bin
-```
-
 Alias `vim` to `nvim` by setting in fish
 
 ```bash
 echo "alias vim nvim" > ~/.config/fish/aliases.fish
 ```
 
-Then write `. ~/.config/fish/aliases.fish` to the top of `~/.config/fish/config.fish` and restart your termianal again. Now your can use `vim` directly.
+Then write `. ~/.config/fish/aliases.fish` to the top of `~/.config/fish/config.fish` and restart your terminal again. Now your can use `vim` directly.
 
 Download this project:
 
