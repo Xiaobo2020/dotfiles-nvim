@@ -155,7 +155,7 @@ Then your can set your text font in iterm2
 Install `neovim` by brew and some dependencies used later
 
 ```bash
-brew install neovim ripgrep fd lazygit
+brew install neovim ripgrep fd lazygit TheZoraiz/ascii-image-converter/ascii-image-converter
 ```
 
 Alias `vim` to `nvim` by setting in fish
