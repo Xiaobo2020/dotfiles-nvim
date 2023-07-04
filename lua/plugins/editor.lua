@@ -96,7 +96,7 @@ return {
         ["<leader>u"] = { name = "+ui" },
         ["<leader>w"] = { name = "+windows" },
         ["<leader>x"] = { name = "+diagnostics/quickfix" },
-        ["<leader>m"] = { name = "+markdown" },
+        ["<leader>m"] = { name = "+mark(down)" },
         ["<leader>h"] = { name = "+hover" },
       },
     },
