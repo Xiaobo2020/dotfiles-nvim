@@ -20,7 +20,7 @@ map("n", "<C-a>", "gg<S-v>G", { desc = "Select all", silent = true, noremap = tr
 map("i", "jk", "<ESC>", { desc = "ESC", silent = true, noremap = true })
 
 -- LSP Finder
-map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { desc = "LSP Finder", silent = true, noremap = true })
+map("n", "gh", "<cmd>Lspsaga finder def+ref<CR>", { desc = "LSP Finder", silent = true, noremap = true })
 
 -- Tmux Navigator
 map("n", "<C-h>", "<cmd>TmuxNavigateLeft<cr>", { desc = "Navigate Left", silent = true, noremap = true })
