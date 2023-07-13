@@ -2,6 +2,7 @@ return {
   {
     "crusj/bookmarks.nvim",
     opts = {
+      storage_dir = "",
       width = 0.90,
       height = 0.90,
       preview_ext_enable = true,
