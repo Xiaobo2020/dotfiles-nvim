@@ -1,5 +1,4 @@
 return {
-
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
