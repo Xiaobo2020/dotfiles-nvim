@@ -17,17 +17,17 @@ return {
   -- everforest
   {
     "sainnhe/everforest",
-    lazy = true,
     name = "everforest",
-    enabled = true,
+    enabled = false,
+    lazy = true,
   },
 
   -- catppuccin
   {
     "catppuccin/nvim",
-    enabled = true,
-    lazy = true,
     name = "catppuccin",
+    enabled = false,
+    lazy = true,
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       background = { -- :h background
