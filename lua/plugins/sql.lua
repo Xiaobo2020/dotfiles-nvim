@@ -9,19 +9,6 @@ return {
     end,
   },
 
-  -- correctly setup lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      -- make sure mason installs the server
-      servers = {
-        sqlls = {
-          settings = {},
-        },
-      },
-    },
-  },
-
   -- formatter
   {
     "williamboman/mason.nvim",
