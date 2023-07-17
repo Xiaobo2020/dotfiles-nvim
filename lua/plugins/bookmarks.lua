@@ -2,7 +2,8 @@ return {
   {
     "crusj/bookmarks.nvim",
     opts = {
-      storage_dir = "",
+      -- storage_dir = "",
+      storage_dir = os.getenv("HOME") .. "/.config/storage/nvim_bookmarks",
       width = 0.90,
       height = 0.90,
       preview_ext_enable = true,
