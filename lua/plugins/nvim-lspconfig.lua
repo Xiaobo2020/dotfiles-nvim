@@ -17,9 +17,9 @@ return {
         },
         html = {},
 
-        sqlls = {
-          settings = {},
-        },
+        -- sqlls = {
+        --   settings = {},
+        -- },
 
         -- emmet_ls = {
         --   filetypes = {
