@@ -12,13 +12,14 @@ return {
     "EdenEast/nightfox.nvim",
     name = "nightfox",
     enabled = true,
+    lazy = true,
   },
 
   -- everforest
   {
     "sainnhe/everforest",
     name = "everforest",
-    enabled = false,
+    enabled = true,
     lazy = true,
   },
 
@@ -26,7 +27,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    enabled = false,
+    enabled = true,
     lazy = true,
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
