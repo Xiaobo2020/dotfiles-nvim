@@ -11,7 +11,11 @@ return {
         ft = "markdown",
       },
     },
-    build = "cd app && npm install",
+
+    -- build = "cd app && npm install",
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
     cmd = "MarkdownPreview",
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
