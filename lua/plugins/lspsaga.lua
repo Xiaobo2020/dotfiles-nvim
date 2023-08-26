@@ -1,6 +1,7 @@
 return {
   {
     "nvimdev/lspsaga.nvim",
+    enabled = true,
     event = "LspAttach",
     opts = {
       ui = {
@@ -18,8 +19,8 @@ return {
       { "<leader>h", "<cmd>Lspsaga hover_doc<cr>", desc = "Hover" },
       { "<leader>xc", "<cmd>Lspsaga show_cursor_diagnostics<cr>", desc = "Cursor Diagnostics (Trouble)" },
       { "<leader>xs", "<cmd>Lspsaga show_line_diagnostics<cr>", desc = "Line Diagnostics (Trouble)" },
-      { "[q", "<cmd>Lspsaga diagnostic_jump_prev<cr>", desc = "Previous trouble/quickfix item" },
-      { "]q", "<cmd>Lspsaga diagnostic_jump_next<cr>", desc = "Next trouble/quickfix item" },
+      -- { "[q", "<cmd>Lspsaga diagnostic_jump_prev<cr>", desc = "Previous trouble/quickfix item" },
+      -- { "]q", "<cmd>Lspsaga diagnostic_jump_next<cr>", desc = "Next trouble/quickfix item" },
     },
     config = function(_, opts)
       require("lspsaga").setup(opts)

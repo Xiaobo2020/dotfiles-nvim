@@ -2,6 +2,7 @@ return {
   -- indent guides for Neovim hlchunk
   {
     "shellRaining/hlchunk.nvim",
+    enabled = false,
     event = { "BufReadPost", "BufNewFile" },
     opts = {
       chunk = {

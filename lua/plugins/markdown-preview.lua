@@ -1,6 +1,4 @@
-local function map(mode, l, r, desc)
-  vim.keymap.set(mode, l, r, { silent = true, noremap = true, desc = desc })
-end
+local map = require("util.utils").map
 
 return {
   {
@@ -26,12 +24,31 @@ return {
       vim.g.vmt_fence_text = "markdown-toc"
       -- vim.g.mkdp_theme = 'dark'
 
-      map("n", "<leader>mp", "<Cmd>MarkdownPreview<CR>", "MarkdownPreview start")
-      map("n", "<leader>ms", "<Cmd>MarkdownPreviewStop<CR>", "MarkdownPreview stop")
-
-      map("n", "<leader>mth", "<Cmd>GenTocGFM<CR>", "Generate toc in GitHub")
-      map("n", "<leader>mtl", "<Cmd>GenTocGitLab<CR>", "Generate toc in GitLab")
-      map("n", "<leader>mtm", "<Cmd>GenTocMarked<CR>", "Generate toc in Markded")
+      map(
+        "n",
+        "<leader>mp",
+        "<Cmd>MarkdownPreview<CR>",
+        { desc = "MarkdownPreview start", silent = true, noremap = true }
+      )
+      map(
+        "n",
+        "<leader>ms",
+        "<Cmd>MarkdownPreviewStop<CR>",
+        { desc = "MarkdownPreview stop", silent = true, noremap = true }
+      )
+      map("n", "<leader>mth", "<Cmd>GenTocGFM<CR>", { desc = "Generate toc in GitHub", silent = true, noremap = true })
+      map(
+        "n",
+        "<leader>mtl",
+        "<Cmd>GenTocGitLab<CR>",
+        { desc = "Generate toc in GitLab", silent = true, noremap = true }
+      )
+      map(
+        "n",
+        "<leader>mtm",
+        "<Cmd>GenTocMarked<CR>",
+        { desc = "Generate toc in Markded", silent = true, noremap = true }
+      )
     end,
     ft = "markdown",
   },

@@ -1,6 +1,4 @@
-local function map(mode, l, r, desc)
-  vim.keymap.set(mode, l, r, { silent = true, noremap = true, desc = desc })
-end
+local map = require("util.utils").map
 
 return {
   {
@@ -11,12 +9,9 @@ return {
       vim.g.floaterm_height = 0.8
       vim.g.floaterm_autoclose = 0
       vim.g.floaterm_opener = "edit"
-      -- vim.cmd(
-      --   "au BufEnter * if &buftype == 'terminal' | :call timer_start(50, { -> execute('startinsert!') }, { 'repeat': 3 }) | endif"
-      -- )
 
-      map("n", "<C-t>", "<Cmd>FloatermToggle<CR>", "Float terminal toggle")
-      map("t", "<C-t>", "<Cmd>FloatermToggle<CR>", "Float terminal toggle")
+      map("n", "<C-t>", "<Cmd>FloatermToggle<CR>", { desc = "Float terminal toggle", silent = true, noremap = true })
+      map("t", "<C-t>", "<Cmd>FloatermToggle<CR>", { desc = "Float terminal toggle", silent = true, noremap = true })
     end,
   },
 }

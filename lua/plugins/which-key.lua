@@ -4,9 +4,7 @@ return {
   -- which-key
   {
     "folke/which-key.nvim",
-    event = "VeryLazy",
     opts = {
-      plugins = { spelling = true },
       defaults = {
         mode = { "n", "v" },
         ["g"] = { name = "+goto" },
@@ -28,13 +26,5 @@ return {
         ["<leader>h"] = { name = "+hover" },
       },
     },
-    config = function(_, opts)
-      local wk = require("which-key")
-      wk.setup(opts)
-      if Util.has("noice.nvim") then
-        opts.defaults["<leader>sn"] = { name = "+noice" }
-      end
-      wk.register(opts.defaults)
-    end,
   },
 }

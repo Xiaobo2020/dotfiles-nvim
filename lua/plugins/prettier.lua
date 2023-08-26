@@ -20,6 +20,7 @@ return {
             "json",
             "markdown",
             "md",
+            "scss",
           },
         })
       )

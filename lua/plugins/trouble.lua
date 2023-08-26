@@ -1,3 +1,7 @@
+if true then
+  return {}
+end
+
 return {
   -- better diagnostics list and others
   {
